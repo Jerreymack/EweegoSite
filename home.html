@@ -1230,24 +1230,31 @@ $(document).ready(function () {
 });
 
 
-$("#dataList").delegate("li", "click", function () {
-   var index = $(this).index()
-
-   if (index == 0) {
-      var lang = 'fr'
-      translate(lang)
-   }
-
-   if (index == 1) {
-      var lang = 'en'
-      translate(lang)
-   }
-
-   if (index == 2) {
-      var lang = 'es'
-      translate(lang)
-   }
+$("#dataList").delegate("li", "click", function() {
+    var index = $(this).index()
+    
+    if (index == 0 ) {
+       var lang = 'fr'
+       translate(lang)
+       $('.lang').find("text").text('FR');
+       $('.langbar').animate({right: "-100%"});
+    }
+  
+    if (index == 1 ) {
+       var lang = 'en'
+       translate(lang)
+       $('.lang').find("text").text('EN');
+       $('.langbar').animate({right: "-100%"});
+    }
+  
+    if (index == 2 ) {
+       var lang = 'es'
+       translate(lang)
+       $('.lang').find("text").text('ES');
+       $('.langbar').animate({right: "-100%"});
+    }
 });
+ 
 </script>
 
 
