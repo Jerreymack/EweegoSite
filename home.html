@@ -124,7 +124,7 @@ html {
   position: absolute;
   display: none;
   left: 50%;
-  bottom: 20%;
+  bottom: 18%;
   margin-right: 6px;
   z-index: 2;
 }
@@ -141,11 +141,16 @@ html {
   height: 29px;
   border-radius: 18px;
   position: absolute;
+  cursor: pointer;
   display: none;
   left: calc(50% + 00px);
-  bottom: calc(10% - 40px);
+  bottom: calc(10% - 46px);
   margin-right: 6px;
   z-index: 2;
+}
+  
+.start:hover {
+      background: #aaa;
 }
 
 .learn {
@@ -161,7 +166,7 @@ html {
   position: absolute;
   display: none;
   left: calc(50% + 130px);
-  bottom: calc(10% - 40px);
+  bottom: calc(10% - 46px);
   margin-right: 6px;
   z-index: 2;
 }
@@ -190,53 +195,23 @@ html {
  * ==============================================
  */
 
-.langbar {
-  float: right;
-  width: 42px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 80px;
-  position: fixed;
-  display: block;
-  margin-top: 90px;
-  padding-top: 30px;
-  right: -100px;
-  height: 102px;
-  transition: 0.1s;
-  z-index: 10;
-  overflow: hidden;
-}
-
-.listlang {
-  float: right;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 76px;
-  height: 55vh;
-  margin-left: 0px;
-  margin-top: -50px;
-  border-radius: 9px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  display: inline-block;
-  white-space: nowrap;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.1);
-  #background: #cdcdcd;
-}
-
-ul {
+#dataList {
   position: absolute;
   display: inline-block;
   list-style-type: none;
   line-height: 18px;
   padding: 0;
-  width: 100px;
-  height: 51vh;
-  margin-left: 0px;
+  top: 42%;
+  right: -100%;
+  width: 43px;
+  height: 123px;
+  border-radius: 30px;
+  background: rgba(90,90,90,0.8);
   overflow-x: hidden;
+  z-index: 8
 }
 
-.sidebar::-webkit-scrollbar {
+#dataList::-webkit-scrollbar {
   display: none;
 }
 
@@ -244,7 +219,8 @@ ul {
   background: rgba(50, 50, 50, 50);
   color: #ccc;
   border-radius: 42px;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
   margin-left: 5px;
   padding-top: 7px;
   height: 25px;
@@ -253,6 +229,7 @@ ul {
   text-align: center;
   font-family: "helvetica neue", "roboto", sans-serif;
   font-size: 13px;
+  cursor: pointer;
   font-weight: 300;
   color: #cdcdcd;
 }
@@ -505,7 +482,7 @@ ul {
   width: 14px;
   background-color: #000;
   border-radius: 50%;
-  top: calc(50% + 180px);
+  top: calc(45% + 180px);
   left: calc(40% + 6px);
   transform: translate(-50%);
   overfow: hidden;
@@ -520,7 +497,7 @@ ul {
   border-radius: 42px;
   border: 0px solid red;
   box-shadow: 0px 0px 25px 25px rgba(250, 250, 250, 0.25);
-  top: calc(50% + 5px);
+  top: calc(45% + 5px);
   left: calc(40% + 4px);
   transform: translate(-50%);
   overfow: hidden;
@@ -599,25 +576,19 @@ ul {
 <!-------------------------------------------------------->
 <!------------------------ LANG BAR ---------------------->
 <!-------------------------------------------------------->
-<div class="langbar">
-  <nav class="listlang">
+
     <ul id="dataList" class="datalist"></ul>
-    <div class="templates">
       <div id="listItem">
-        <div class="row1">
-          <div class="langue"></div>
-        </div>
-        <div class="row2"></div>
+       <div class="langue"></div>
       </div>
-    </div>
-  </nav>
-</div>
+
+
 <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="lang" data-bbox="26.203 2 138.351 196.757" data-type="ugc">
   <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
   <g class="layer">
     <title />
-    <ellipse cx="18" cy="19" fill="#000000" fill-opacity="0.5" id="svg_1" rx="17.5" ry="17.5" stroke="#000000" stroke-width="0" />
-    <text fill="#bbb" font-family="Helvetica neue" font-size="16" font-weight="200" id="svg_2" stroke="#000000" stroke-width="0" text-anchor="middle" x="18.25" xml:space="preserve" y="24.88">FR</text>
+    <ellipse cx="18" cy="19" fill="#000000" fill-opacity="0.6" id="svg_1" rx="17.5" ry="17.5" stroke="#000000" stroke-width="0" />
+    <text fill="#bbb" font-family="Helvetica neue" font-size="16" font-weight="300" id="svg_2" stroke="#000000" stroke-width="0" text-anchor="middle" x="18.25" xml:space="preserve" y="24.88">FR</text>
   </g>
 </svg>
 <svg width="46" height="46" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="menu" version="1.1" xml:space="preserve">
@@ -952,6 +923,62 @@ function translate(l) {
       $('.slogan2').html('¡Movilidad reinventada!<br><h  id="slog2_" style="font-size:24px;color:#aaa;font-weight:300">Más alcance y innovación,<br>sin costes iniciales.</h>')
       $('.learn').html('Más info <img style="zoom:0.85" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KIDwhLS0gQ3JlYXRlZCB3aXRoIFNWRy1lZGl0IC0gaHR0cHM6Ly9naXRodWIuY29tL1NWRy1FZGl0L3N2Z2VkaXQtLT4KIDxnIGNsYXNzPSJsYXllciI+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxnIGlkPSJzdmdfNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAwKSB0cmFuc2xhdGUoMCAxKSB0cmFuc2xhdGUoMCAxKSB0cmFuc2xhdGUoLTMyLjEgLTAuMSkiPgogICA8bGluZSBmaWxsPSIjYmZiZmJmIiBmaWxsLW9wYWNpdHk9Im51bGwiIGlkPSJzdmdfMiIgc3Ryb2tlPSIjY2NjY2NjIiBzdHJva2UtZGFzaGFycmF5PSJudWxsIiBzdHJva2UtbGluZWNhcD0ibnVsbCIgc3Ryb2tlLWxpbmVqb2luPSJudWxsIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgeDE9IjM2Ljg1IiB4Mj0iNDUuNTUiIHkxPSIwLjg1IiB5Mj0iMC44NSIvPgogICA8bGluZSBmaWxsPSIjYmZiZmJmIiBmaWxsLW9wYWNpdHk9Im51bGwiIGlkPSJzdmdfMSIgc3Ryb2tlPSIjY2NjY2NjIiBzdHJva2UtZGFzaGFycmF5PSJudWxsIiBzdHJva2UtbGluZWNhcD0ibnVsbCIgc3Ryb2tlLWxpbmVqb2luPSJudWxsIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgdHJhbnNmb3JtPSJyb3RhdGUoLTQxLjAwOTEgMzcuNjQgNy42MykiIHgxPSIzMC43NyIgeDI9IjQ0LjUxIiB5MT0iNy42MyIgeTI9IjcuNjMiLz4KICAgPGxpbmUgZmlsbD0iI2JmYmZiZiIgZmlsbC1vcGFjaXR5PSJudWxsIiBpZD0ic3ZnXzMiIHN0cm9rZT0iI2NjY2NjYyIgc3Ryb2tlLWRhc2hhcnJheT0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIHRyYW5zZm9ybT0icm90YXRlKDkwIDQ1LjEgNC4zNSkiIHgxPSI0MS4yIiB4Mj0iNDkiIHkxPSI0LjM1IiB5Mj0iNC4zNSIvPgogIDwvZz4KIDwvZz4KPC9zdmc+"/>')
 
+   } else if (lang == 'de') {
+      $('#opx').html('Mobilitätsanbieter')
+      $('#usx').html('Benutzer')
+      $('#dvx').html('Entwickler')
+      $('#ctx').html('Kontakt')
+      $('#itm_opx').html('Mobilitätsanbieter')
+      $('#itm_usx').html('Benutzer')
+      $('#itm_dvx').html('Entwickler')
+      $('#itm_ctx').html('Kontakt')
+      $('#itm_lgx').html('Rechtliches')
+      $('.start').html('Jetzt starten')
+      $('.slogan').html('<h id="slog_" style="font-size:36px;color:#bbb;font-weight:300">Eine Welt. Eine Fahrt. </h><br>Alles nahtlos verbunden.')
+      $('.slogan2').html('Mobilität neu gedacht!<br><h  id="slog2_" style="font-size:24px;color:#aaa;font-weight:300">Mweiter, innovativer,<br>ohne Investitionskosten.</h>')
+      $('.learn').html('Mehr erfahren <img style="zoom:0.85" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KIDwhLS0gQ3JlYXRlZCB3aXRoIFNWRy1lZGl0IC0gaHR0cHM6Ly9naXRodWIuY29tL1NWRy1FZGl0L3N2Z2VkaXQtLT4KIDxnIGNsYXNzPSJsYXllciI+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxnIGlkPSJzdmdfNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAwKSB0cmFuc2xhdGUoMCAxKSB0cmFuc2xhdGUoMCAxKSB0cmFuc2xhdGUoLTMyLjEgLTAuMSkiPgogICA8bGluZSBmaWxsPSIjYmZiZmJmIiBmaWxsLW9wYWNpdHk9Im51bGwiIGlkPSJzdmdfMiIgc3Ryb2tlPSIjY2NjY2NjIiBzdHJva2UtZGFzaGFycmF5PSJudWxsIiBzdHJva2UtbGluZWNhcD0ibnVsbCIgc3Ryb2tlLWxpbmVqb2luPSJudWxsIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgeDE9IjM2Ljg1IiB4Mj0iNDUuNTUiIHkxPSIwLjg1IiB5Mj0iMC44NSIvPgogICA8bGluZSBmaWxsPSIjYmZiZmJmIiBmaWxsLW9wYWNpdHk9Im51bGwiIGlkPSJzdmdfMSIgc3Ryb2tlPSIjY2NjY2NjIiBzdHJva2UtZGFzaGFycmF5PSJudWxsIiBzdHJva2UtbGluZWNhcD0ibnVsbCIgc3Ryb2tlLWxpbmVqb2luPSJudWxsIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgdHJhbnNmb3JtPSJyb3RhdGUoLTQxLjAwOTEgMzcuNjQgNy42MykiIHgxPSIzMC43NyIgeDI9IjQ0LjUxIiB5MT0iNy42MyIgeTI9IjcuNjMiLz4KICAgPGxpbmUgZmlsbD0iI2JmYmZiZiIgZmlsbC1vcGFjaXR5PSJudWxsIiBpZD0ic3ZnXzMiIHN0cm9rZT0iI2NjY2NjYyIgc3Ryb2tlLWRhc2hhcnJheT0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIHRyYW5zZm9ybT0icm90YXRlKDkwIDQ1LjEgNC4zNSkiIHgxPSI0MS4yIiB4Mj0iNDkiIHkxPSI0LjM1IiB5Mj0iNC4zNSIvPgogIDwvZz4KIDwvZz4KPC9zdmc+"/>')
+
+   }
+  
+  
+      var wdt = $(window).width()
+   console.log(wdt)
+   if (wdt < 750) {
+      $('.top_menu').css('display', 'none')
+      $('.menu').fadeIn(1500)
+      $('.slogan').css('font-size', '26px')
+      $('.slogan').css('width', '82%')
+      $('#slog_').css('font-size', '22px')
+
+      $('.slogan2').css('font-size', '18px')
+      $('.slogan2').css('width', '82%')
+      $('.slogan2').css('left', '10%')
+      $('#slog2_').css('font-size', '20px')
+      $('.start').css('left', '10%')
+      $('.learn').css('left', (wdt / 10) + 130 + 'px')
+
+      $('.copyright').css('display', 'none')
+      //$('.logo').css('transform','translate(2%)')
+      //alert('small')
+   }
+
+   if (wdt > 750) {
+      $('.top_menu').fadeIn(1500)
+      $('.menu').css('display', 'none')
+      $('.slogan').css('font-size', '38px')
+      $('.slogan').css('width', '52%')
+      $('#slog_').css('font-size', '36px')
+
+      $('.slogan2').css('font-size', '20px')
+      $('.slogan2').css('width', '50%')
+      $('.slogan2').css('left', '50%')
+      $('#slog2_').css('font-size', '24px')
+      $('.start').css('left', '50%')
+      $('.learn').css('left', (wdt / 2) + 130 + 'px')
+
+      $('.copyright').css('display', 'block')
+      //$('.logo').css('margin-top','23px')
+      //$('.logo').css('transform','translate(-50%)')
    }
 
 }
@@ -1048,7 +1075,7 @@ $(window).resize(function () {
 setTimeout(function () {
 
    $('.pin').animate({
-      top: '50%'
+      top: '45%'
    }, 1100);
    $('.oval').fadeIn(300);
    $('.oval').animate({
@@ -1072,10 +1099,10 @@ setTimeout(function () {
       $('.lang').fadeIn(800);
 
       $('.vcr_').animate({
-         top: '350px'
+         top: '300px'
       }, 2000);
       $('.vcr2_').animate({
-         top: '220px'
+         top: '190px'
       }, 3000);
 
       setTimeout(function () {
@@ -1121,7 +1148,7 @@ $('.overlay').click(function () {
    $('.slider').animate({
       top: '100%'
    },300);
-   $('.langbar').animate({
+   $('#dataList').animate({
       right: "-100%"
    });
    setTimeout(function () {
@@ -1168,9 +1195,8 @@ var defLang = userLang.substring(0, 2)
 //*------------------------------LANG--------------------------------*/
 //*------------------------------------------------------------------*/
 $('.lang').click(function () {
-   $('.langbar').css('display', 'block');
-   $('.langbar').animate({
-      right: "76px"
+   $('#dataList').animate({
+      right: "16px"
    });
    $('.overlay').css('display', 'block')
 
@@ -1188,7 +1214,7 @@ $('.lang').mouseover(function () {
 
 $('.lang').mouseout(function () {
    $('.lang').find("ellipse").css({
-      fill: 'rgba(0,0,0,0.5)'
+      fill: 'rgba(0,0,0,0.6)'
    });
    $('.lang').find("text").css({
       fill: '#bbb'
@@ -1201,7 +1227,7 @@ $('.lang').mouseout(function () {
 //*------------------------------------------------------------------*/ 	
 $(document).ready(function () {
 
-   var L_dataJSON = '[{"iso":"FR","langue":"Français"},{"iso":"EN","langue":"English"},{"iso":"ES","langue":"Español"}]';
+   var L_dataJSON = '[{"iso":"FR","langue":"Français"},{"iso":"EN","langue":"English"},{"iso":"ES","langue":"Español"},{"iso":"DE","langue":"Deutsch"}]';
 
 
    var L_dataObject = JSON.parse(L_dataJSON);
@@ -1214,17 +1240,13 @@ $(document).ready(function () {
 
       var l_listItem = $('<li class="lang_li">' + listItemString + '</li>');
 
-
       //if ( lg == "Français" ) {
 
       //var listItemClt = $('.flag', listItem);
       //listItemClt.html('<img id ="img" src="https://d14op7of5259m7.cloudfront.net/Langues/' + iso + '.svg" alt="title" class = "img" style="width:26px;height:26px; border-radius:13px" />');
 
       //}
-
-      var iso = item.iso;
-      var listItemLang = $('.langue', l_listItem);
-      listItemLang.html(iso);
+      $('.langue', l_listItem).html(item.iso);
 
       $('#dataList').append(l_listItem);
 
@@ -1240,22 +1262,31 @@ $("#dataList").delegate("li", "click", function() {
        var lang = 'fr'
        translate(lang)
        $('.lang').find("text").text('FR');
-       $('.langbar').animate({right: "-100%"});
+       $('#dataList').animate({right: "-100%"});
     }
   
     if (index == 1 ) {
        var lang = 'en'
        translate(lang)
        $('.lang').find("text").text('EN');
-       $('.langbar').animate({right: "-100%"});
+       $('#dataList').animate({right: "-100%"});
     }
   
     if (index == 2 ) {
        var lang = 'es'
        translate(lang)
        $('.lang').find("text").text('ES');
-       $('.langbar').animate({right: "-100%"});
+       $('#dataList').animate({right: "-100%"});
     }
+    
+    if (index == 3 ) {
+       var lang = 'de'
+       translate(lang)
+       $('.lang').find("text").text('DE');
+       $('#dataList').animate({right: "-100%"});
+    }
+  
+  
 });
  
 </script>
