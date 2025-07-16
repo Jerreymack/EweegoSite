@@ -1104,6 +1104,7 @@ $('.menu').click(function () {
    var pct = ($('.slider').height() / hgt) * 100
    console.log(pct)
    $('.overlay').css('display', 'block');
+   $('.overlay').css('background', 'rgba(0, 0, 0, 0.45)');
    //$('.slider').css('display', 'block'); 
    $('.slider').animate({
       top: 100 - pct + '%'
@@ -1115,6 +1116,7 @@ $('.menu').click(function () {
 $('.overlay').click(function () {
    var wdt = $(window).width()
    $('.overlay').css('display', 'none');
+   $('.overlay').css('background', 'rgba(0, 0, 0, 0.15)');
    $('.slider').animate({
       top: '100%'
    },300);
