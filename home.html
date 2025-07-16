@@ -1107,7 +1107,7 @@ $('.menu').click(function () {
    //$('.slider').css('display', 'block'); 
    $('.slider').animate({
       top: 100 - pct + '%'
-   });
+   },300);
    //$('.menu').css('display', 'none'); 
    //$('.lang').css('display', 'none'); 
 });
@@ -1117,7 +1117,7 @@ $('.overlay').click(function () {
    $('.overlay').css('display', 'none');
    $('.slider').animate({
       top: '100%'
-   });
+   },300);
    $('.langbar').animate({
       right: "-100%"
    });
