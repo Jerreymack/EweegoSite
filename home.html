@@ -1295,6 +1295,19 @@ $("#dataList").delegate("li", "click", function() {
 
 
 
+$('.start').click(function () {
+  
+      //const param = btoa(usData)
+	
+      $('#_div_body').attr('data','https://eweego.netlify.app/start.html');
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
+ 
+
+
 function closeDiv() {
     //$('._div').css('display', 'none')
     alert('Close DIV') 
