@@ -667,13 +667,12 @@ and we’ll find the perfect solution for you and your users.
 <script>
 
 $(document).ready(function(){
-    
-  //________________________________________________________________//
-  //**______Get browser language then translate the layout _______**//
-  //________________________________________________________________//
-  userLang = navigator.language || navigator.userLanguage;
-  userLangX = userLang.split('-')
-  lang = userLangX[0] 
+ 
+    const url = document.URL
+    const urlArray = url.split('=');
+
+    lang = (urlArray[1]).toLowerCase()	
+    alert(lang) 
   
   //translate(lang)
 
