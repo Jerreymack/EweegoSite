@@ -531,7 +531,10 @@ html {
 }
 
 
-
+/*--------------------------------------------------------*/
+/*--------------------------- DIV ------------------------*/
+/*--------------------------------------------------------*/
+	
 ._div {
   position: absolute;
   display: none;
@@ -544,34 +547,15 @@ html {
   min-height: 100%;
   overflow: hidden;	
   z-index: 1000;
-  }
-  
-#_div_header {
-  background: rgba(0,0,0,0.4);
-  z-index: 210;
-  height: 26px;
-  width: 100%;
-}
-
-
-._div_closer {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: calc(0% + 2px);
-  top: calc(0% + 2px);
-  cursor: pointer;
-  z-index: 209;
 }
   
   
 #_div_body {
   position: absolute;
   width: 100%;
-  height: calc(100% - 28px);
+  height: 100% ;
   left: 0% ;
-  top: calc(0% + 28px);
-  background: pink;
+  top: 0%;
 }
 
 </style>
@@ -585,20 +569,7 @@ html {
 <!----------------------------------------------------->
 
 <div id="_div" class="_div">
-  
-       <div id="_div_header">
-
-<svg width="25" height="25" class="_div_closer">
- <g class="layer">
-  <title></title>
-  <path d="m3,21.32l18,-18" id="svg_1" stroke="#e5e5e5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  <path d="m3,3.32l18,18" id="svg_2" stroke="#e5e5e5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
- </g>
-</svg>
-	</div>
-
-        <object id="_div_body" type="text/html" data="" style="width:100%;height:100%"></object>
-    
+   <object id="_div_body" type="text/html" data="" style="width:100%;height:100%"></object>
 </div> 
 	
 
