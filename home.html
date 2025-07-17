@@ -1344,9 +1344,9 @@ $("#dataList").delegate("li", "click", function() {
 $('.start').click(function () {
   
       var lang = $('.lang').find("text").text()
-      alert(lang)	
+      
 	
-      $('#_div_body').attr('data','https://eweego.netlify.app/start.html');
+      $('#_div_body').attr('data','https://eweego.netlify.app/start.html?param=' + lang );
 
       $('._div').fadeIn()
       $('#_div_body').load(location.href + " #_div_body");
