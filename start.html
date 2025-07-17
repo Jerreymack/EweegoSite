@@ -602,9 +602,9 @@ h2 {
                   <h class="eweeg2">eweeg</h>
                   <h class="o2"></h>  
                   <h class="title2"></h>
-                  <input type="text" class="full_name" placeholder="Full name">
-                  <input type="text" class="work_email" placeholder="Work email">
-                  <input type="text" class="organism" placeholder="Organisation">
+                  <input type="text" class="full_name" placeholder="">
+                  <input type="text" class="work_email" placeholder="">
+                  <input type="text" class="organism" placeholder="">
                   <input type="text" class="question" placeholder="">
                   <textarea type="text" class="description"  rows="6" placeholder=""></textarea>
               
@@ -694,7 +694,9 @@ function translate(l) {
       $('.organism').attr('placeholder','Organisation')
       $('.question').attr('placeholder','Select a topic')
       $('.description').attr('placeholder','Describe your request...')
-    
+
+      $('.paragraph2').html('Want to work with Eweego?<br>Get in touch with us and we’ll find the perfect solution for you and your users')
+ 
    } else if (lang == 'fr') {
 
       $('.title').html('Assurez les<br>déplacements')
@@ -706,11 +708,13 @@ function translate(l) {
       $('#fry_nm').html('Traversiers')  
 
       $('.title2').html('Intégrez<br>Eweego')
-      $('.full_name').attr('placeholder','Nom Complet')
+      $('.full_name').attr('placeholder','Nom complet')
       $('.work_email').attr('placeholder','Courriel professionnel')
       $('.organism').attr('placeholder','Organisation')
       $('.question').attr('placeholder','Choisissez un sujet')
       $('.description').attr('placeholder','Décrivez votre besoin...')
+    
+      $('.paragraph2').html('Envie de collaborer avec Eweego?<br>Parlons-en et créerons ensemble la solution parfaite pour vous et vos utilisateurs.')
      
    } else if (lang == 'es') {
      
