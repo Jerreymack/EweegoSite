@@ -9,22 +9,542 @@
  
 <style>
 
+body {
+            background: #fff;
+            color: #000;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+}
+
+ 
+.container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+}
+
+
+.main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0px;
+            margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+}
+
+
+/*------------------ CARD 1 -------------------------*/
+
+.card {
+            background: #fff;
+            border-radius: 0px;
+            padding: 0px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            border-bottom: 1px solid #eee;
+}
+
+
+.return {
+  position: absolute;
+  display: block;
+  left: 16px;
+  top: 10px;
+  height: 28px;
+  width: 90px;
+  zoom: 0.9;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #bbb; 
+  background: #282828;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid #777;
+  padding-top: 9px;
+  padding-left: 26px;
+  padding-right: 16px;		
+}
+
+.return:hover {
+    background: #111;
+}
+      
+      
+.eweeg {
+  position: relative;
+  display: block;
+  left: calc(50% - 40px);
+  transform: translate(-50%, -50%);
+  top: 60px;
+  height: 50px;
+  width: 125px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  text-align: right;	
+  color: #ccc;		
+}
+
+
+.o {
+  position: relative;
+  display: block;
+  left: calc(50% + 23px);
+  top: -8px;
+  height: 32px;
+  width: 31px;
+  background-image: linear-gradient(to top right, #ff6a00, #ff6a00, #fff);
+  border-radius: 50px;
+}
+
+
+.title {
+  position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%, -50%);
+  top: 90px;
+  height: 150px;
+  line-height: 60px;
+  width: 350px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;	
+  color: #ccc;		
+}
+
+
+.titlex {
+  position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%);
+  top: 30px;
+  height: 40px;
+  line-height: 20px;
+  width: 350px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;	
+  color: #ccc;		
+}
+
+
+.widget{
+            width: calc(100% - 116px);
+            margin-top: 70px;
+            margin-left: 40px;
+            padding: 14px 16px;
+            height: 306px;
+            border: 1px solid #666;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #444;
+            transition: border-color 0.3s;
+}
+
+
+
+.paragraph{
+            width: calc(100% - 116px);
+            margin-top: 18px;
+            margin-left: 40px;
+            padding: 10px 16px;
+            transition: border-color 0.3s;
+            text-align: center;
+            color: #aaa; 
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+}
+
+
+.book{
+    position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%);
+            width: 180px;
+            margin-top: 10px;
+            height: 32px; 
+            background: #000;
+            text-align: center;
+            color: #bbb; 
+            cursor: pointer;
+            padding-top: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 30px;
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+}
+
+.book:hover {
+            background: #ff6a00;
+            color: #000; 
+}
+
+
+.gap{
+            width: calc(100% - 116px);
+            margin-top: 10px;
+            margin-left: 40px;
+            padding: 10px ;
+            transition: border-color 0.3s;
+}
+
+/*------------------ CARD 2 -------------------------*/      
+            
+.eweeg2 {
+  position: relative;
+  display: block;
+  left: calc(50% - 40px);
+  transform: translate(-50%, -50%);
+  top: 60px;
+  height: 50px;
+  width: 125px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  text-align: right;	
+  color: #666;		
+}
+
+
+
+.o2 {
+  position: relative;
+  display: block;
+  left: calc(50% + 23px);
+  top: -8px;
+  height: 32px;
+  width: 31px;
+  cursor: pointer;
+  background-image: linear-gradient(to top right, #ff6a00, #ff6a00, #fff);
+  border-radius: 50px;
+}
+
+.title2 {
+  position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%, -50%);
+  top: 90px;
+  height: 150px;
+  line-height: 60px;
+  width: 320px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  text-align: center;	
+  color: #000;		
+}
+
+
+.full_name{
+            width: calc(100% - 116px);
+            margin-top: 30px;
+            margin-left: 40px;
+            padding: 14px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #f0f0f0;
+            transition: border-color 0.3s;
+}
+
+
+.work_email{
+            width: calc(100% - 116px);
+            margin-top: 20px;
+            margin-left: 40px;
+            padding: 14px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #f0f0f0;
+            transition: border-color 0.3s;
+}
+
+
+
+.question{
+            width: calc(100% - 116px);
+            margin-top: 20px;
+            margin-left: 40px;
+            padding: 14px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #f0f0f0;
+            transition: border-color 0.3s;
+}
+
+
+.organism{
+            width: calc(100% - 116px);
+            margin-top: 20px;
+            margin-left: 40px;
+            padding: 14px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #f0f0f0;
+            transition: border-color 0.3s;
+}
+
+.description{
+            width: calc(100% - 116px);
+            margin-top: 20px;
+            margin-left: 40px;
+            padding: 14px 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #f0f0f0;
+            transition: border-color 0.3s;
+}
+
+
+.paragraph2{
+            width: calc(100% - 116px);
+            margin-top: 10px;
+            margin-left: 40px;
+            padding: 10px 16px;
+            transition: border-color 0.3s;
+            text-align: center;
+            color: #888; 
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+}
+
+.submit{
+    position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%);
+            width: 180px;
+            margin-top: 40px;
+            height: 32px; 
+            background: #333;
+            text-align: center;
+            color: #ddd; 
+            cursor: pointer;
+            padding-top: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 30px;
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+}
+
+.submit:hover {
+            background: #ff6a00;
+            color: #000; 
+}
+
+     
+/* Main Footer Styles */
+.main-footer {
+            background: #fff;
+            margin-top: 0px;
+}
+
+   
+
+.company{
+            width: 250px;
+            margin-top: 70px;
+            margin-left: 40px;
+            padding: 5px 5px;
+            transition: border-color 0.3s;
+            text-align: left;
+            color: #888; 
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+}
+
+.address{
+            width: 250px;
+            margin-top: 0px;
+            margin-left: 40px;
+            padding: 0px 5px;
+            transition: border-color 0.3s;
+            text-align: left;
+            color: #888; 
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+}
+
+.address2{
+            width: 250px;
+            margin-top: 0px;
+            margin-left: 40px;
+            padding: 0px 5px;
+            transition: border-color 0.3s;
+            text-align: left;
+            color: #888; 
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+}
+
+
+.copyright {
+            width: 250px;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            padding: 0px 5px;
+            transition: border-color 0.3s;
+            text-align: left;
+            color: #666; 
+            font-family: 'helvetica neue', 'roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+}
+
+
+
+.pinicon { 
+  position: relative;
+  float: right;
+  bottom: -35%;
+  filter: opacity(15%);
+  zoom: 0.25;
+ }
+
+
 </style>
   
 </head>
 
 <body>
 
-<button>Close Div</button>
+    <div class="container">
+
+
+        <div class="main-content">
+          
+          
+            <div class="card" style="background: #333;">
+              
+                  <h class="return"><img style="position:absolute;left:7px;top:7px" src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8ZyBkYXRhLW5hbWU9ImFycm93IGxlZnQiIGlkPSJhcnJvd19sZWZ0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDEpIG1hdHJpeCgwLjU2ODYyMSAwIDAgMC41MjY2MTEgLTEuMTQ3NTIgMS44MDU0KSI+CiAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTIyLDI5LjczYTEsMSAwIDAgMSAtMC43MSwtMC4yOWwtMTEuMzYsLTExLjMyYTMsMyAwIDAgMSAwLC00LjI0bDExLjMxLC0xMS4zMmExLDEgMCAxIDEgMS40MiwxLjQ0bC0xMS4zMiwxMS4yOWExLDEgMCAwIDAgMCwxLjQybDExLjMyLDExLjI5YTEsMSAwIDAgMSAwLDEuNDJhMSwxIDAgMCAxIC0wLjY2LDAuMzF6IiBmaWxsPSIjZTVlNWU1IiBpZD0ic3ZnXzEiIHN0cm9rZT0iI2ZmZmZmZiIvPgogIDwvZz4KIDwvZz4KPC9zdmc+'/> Go Back</h>
+
+                  <h class="eweeg">eweeg</h>
+                  <h class="o"></h>                
+                  <h class="title">Focus on<br>moving people</h>
+                  <h class="titlex">We take care of the rest</h>
+                  <div class="widget"></div>
+              
+                  <p class="paragraph">
+                   Eweego delivers exceptional value to users by unifying all mobility options on its pioneering platform.<br>Do you want to see how it works?
+                    
+                  </p>
+              
+              
+                  <div class="book">Book a demo</div>
+                  <div class="gap"></div>
+
+            </div>
+            
+            <div class="card">
+              
+              
+                  <h class="eweeg2">eweeg</h>
+                  <h class="o2"></h>  
+                  <h class="title2">Integrate<br>with Eweego</h>
+                  <input type="text" class="full_name" placeholder="Full name">
+                  <input type="text" class="work_email" placeholder="Work email">
+                  <input type="text" class="organism" placeholder="Organisation">
+                  <input type="text" class="question" placeholder="What can we help you with?">
+                  <textarea type="text" class="description"  rows="6" placeholder="Describe your request..."></textarea>
+              
+                  <p class="paragraph2">
+                    Want to work with Eweego?<br>Get in touch with us
+and we’ll find the perfect solution for you and your users.
+                  </p>
+              
+              
+                  <div class="submit">Submit</div>
+                  <div class="gap"></div>
+               
+
+            </div>
+        </div>
+        
+        <!-- Main Footer Section -->
+        <div class="main-footer">
+          
+          
+          <svg class="pinicon" width="1024" height="1024" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="svg_1"/>
+  <path class="active-path" d="m702.31,207.73c-51.12,-50.12 -119.1,-77.73 -191.4,-77.73c-72.32,0 -140.29,27.61 -191.41,77.73c-94.62,92.75 -106.38,267.25 -25.47,372.98l216.88,307.05l216.54,-306.62c81.24,-106.16 69.48,-280.66 -25.14,-373.41l0,0zm-188.91,282.07c-54.47,0 -98.81,-43.46 -98.81,-96.87s44.34,-96.87 98.81,-96.87s98.81,43.47 98.81,96.87s-44.33,96.87 -98.81,96.87z" data-old_color="#000000" data-original="#000000" fill="url(#svg_18)" id="svg_2"/>
+  <ellipse cx="515.8" cy="418.28" fill="#121212" id="svg_3" rx="122.55" ry="124.62" stroke="#121212" stroke-width="5"/>
+  <ellipse cx="509.57" cy="393.86" fill="#666" id="svg_5" rx="55.29" ry="54.03" stroke="#333" stroke-width="5"/>
+  <ellipse cx="347.99" cy="392.88" fill="#aaa" id="svg_4" rx="55.29" ry="54.03" stroke="#222" stroke-width="5"/>
+  <ellipse cx="671.51" cy="393.92" fill="#444" id="svg_6" rx="55.29" ry="54.03" stroke="#444" stroke-width="5"/>
+ </g>
+ <defs>
+  <linearGradient id="svg_18" x1="0.53" x2="0.54" y1="0.2" y2="0">
+   <stop offset="0" stop-color="#121212"/>
+   <stop offset="1" stop-color="#999"/>
+  </linearGradient>
+ </defs>
+</svg>
+          
+          <div class="company">Eweego Tech Inc</div>
+          <div class="address">75 rue Queen, suite 1400,</div>
+          <div class="address2">Montreal, QC, H3C 2N6, Canada.</div>
+
+        <div class="copyright"></div>
+              
+        </div>
+      
+      
+          
+      
+      
+    </div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
 
-$('button').click(function () {
+ 
+$(document).ready(function() {         
+          var d = new Date();
+          var year = d.getFullYear();
+          var copyright = 'Eweego Tech Inc.  © ' + year
+          $('.copyright').html(copyright);          
+});
 
+ 
+$('return').click(function () {
     window.parent.closeDiv();
-
 });
        
 </script>
