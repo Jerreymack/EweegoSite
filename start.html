@@ -671,12 +671,34 @@ $(document).ready(function(){
     const url = document.URL
     const urlArray = url.split('=');
 
-    lang = (urlArray[1]).toLowerCase()	
-    alert(lang) 
-  
-  //translate(lang)
+    lang = (urlArray[1]).toLowerCase()	 
+    translate(lang)
 
 });
+
+
+
+function translate(l) {
+
+   var lang = l
+
+   if (lang == 'en') {
+    
+      $('.title').html('Focus on<br>moving people')
+      $('.titlex').html('We take care of the rest')
+    
+   } else if (lang == 'fr') {
+
+      $('.title').html('Assurez<br>les déplacements')
+      $('.titlex').html('Nous nous chargeons du reste')
+     
+   } else if (lang == 'es') {
+     
+   } else if (lang == 'de') {
+     
+   }
+ 
+} 
 
 
 $(document).ready(function(){
