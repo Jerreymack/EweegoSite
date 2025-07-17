@@ -1343,7 +1343,8 @@ $("#dataList").delegate("li", "click", function() {
 
 $('.start').click(function () {
   
-      //const param = btoa(usData)
+      var lang = $('.lang').find("text").text()
+      alert(lang)	
 	
       $('#_div_body').attr('data','https://eweego.netlify.app/start.html');
 
