@@ -1371,6 +1371,19 @@ $('.learn').click(function () {
       $('#_div_body').load(location.href + " #_div_body");
 
 }); 
+
+	
+	
+$('#opx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/operators.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
  
 
 
