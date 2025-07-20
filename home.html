@@ -1387,8 +1387,8 @@ $("#dataList").delegate("li", "click", function() {
 
 $('.start').click(function () {
 
-      var srce = 'home'	
-      getStarted(srce)
+      //var srce = 'home'	
+      getStarted()
   
       //var lang = $('.lang').find("text").text()
       
@@ -1400,12 +1400,12 @@ $('.start').click(function () {
 
 }); 
 
-function getStarted(s) {
+function getStarted() {
   
       var lang = $('.lang').find("text").text()
       
 	
-      $('#_sdiv_body').attr('data','https://eweego.netlify.app/start.html?param=' + lang + '|' + s );
+      $('#_sdiv_body').attr('data','https://eweego.netlify.app/start.html?param=' + lang  );
 
       $('._sdiv').fadeIn()
       $('#_sdiv_body').load(location.href + " #_sdiv_body");
@@ -1455,6 +1455,10 @@ $('#itm_opx').click(function () {
 	
  
 
+
+function closeSDiv() {
+    $('._sdiv').css('display', 'none') 
+}
 
 function closeDiv() {
     $('._div').css('display', 'none') 
