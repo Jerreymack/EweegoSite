@@ -565,6 +565,35 @@ html {
   top: 0%;
 }
 
+
+	
+/*--------------------------------------------------------*/
+/*--------------------------- DIV ------------------------*/
+/*--------------------------------------------------------*/
+	
+._sdiv {
+  position: absolute;
+  display: none;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;	
+  z-index: 1001;
+}
+  
+  
+#_sdiv_body {
+  position: absolute;
+  width: 100%;
+  height: 100% ;
+  left: 0% ;
+  top: 0%;
+}
+
 </style>
   
 </head>
@@ -577,6 +606,14 @@ html {
 
 <div id="_div" class="_div">
    <object id="_div_body" type="text/html" data="" style="width:100%;height:100%"></object>
+</div> 
+
+<!------------------------------------------------------->    
+<!------------------------START DIV --------------------->
+<!------------------------------------------------------->
+
+<div id="_sdiv" class="_sdiv">
+   <object id="_sdiv_body" type="text/html" data="" style="width:100%;height:100%"></object>
 </div> 
 	
 
@@ -1349,16 +1386,31 @@ $("#dataList").delegate("li", "click", function() {
 
 
 $('.start').click(function () {
+
+      var srce = 'home'	
+      getStarted(srce)
+  
+      //var lang = $('.lang').find("text").text()
+      
+	
+      //$('#_sdiv_body').attr('data','https://eweego.netlify.app/start.html?param=' + lang );
+
+      //$('._sdiv').fadeIn()
+      //$('#_sdiv_body').load(location.href + " #_sdiv_body");
+
+}); 
+
+function getStarted(s) {
   
       var lang = $('.lang').find("text").text()
       
 	
-      $('#_div_body').attr('data','https://eweego.netlify.app/start.html?param=' + lang );
+      $('#_sdiv_body').attr('data','https://eweego.netlify.app/start.html?param=' + lang + '|' + s );
 
-      $('._div').fadeIn()
-      $('#_div_body').load(location.href + " #_div_body");
+      $('._sdiv').fadeIn()
+      $('#_sdiv_body').load(location.href + " #_sdiv_body");
 
-}); 
+};
 
 	
 $('.learn').click(function () {
