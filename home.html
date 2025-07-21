@@ -1428,6 +1428,32 @@ $('#itm_opx').click(function () {
 
 }); 
 
+
+		
+	
+$('#usx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/users.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
+	
+	
+$('#itm_usx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/users.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
+
 	
 
 	
