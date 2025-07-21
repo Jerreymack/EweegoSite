@@ -654,7 +654,247 @@ body {
 
 <script>
 
+      $(document).ready(function() {
+        const url = document.URL
+        const urlArray = url.split('=');
+        lang = (urlArray[1]).toLowerCase()
+        //translate(lang)
+      });
+     
+      $(document).ready(function() {
+        var d = new Date();
+        var year = d.getFullYear();
+        var copyright = 'Eweego Tech Inc.  © ' + year
+        $('.copyright').html(copyright);
+      });
 
+
+      
+      //$('.start').click(function () {
+	//window.parent.getStarted()  
+      //}); 
+
+
+      $(document).ready(function() {
+
+      var wdt = $(window).width()
+     var wdtx = $('li').width()
+     var hgt = $('li').height()
+     console.log(wdt)
+     if ( wdt < 769 ) {
+       
+
+        $('.title').css('font-size','36px')
+        $('.title').css('line-height','40px')
+        $('.title').css('width','90%') 
+        $('.title').css('height','130px') 
+       
+        $('.op_img').css('margin-top','-50px') 
+       
+        $('.paragraph').css('width','300px')
+        $('.paragraph').css('font-size','17px')
+        $('.paragraph').css('margin-top','-50px') 
+       
+        $('.elevate').css('font-size','32px')
+        $('.elevate').css('left','2%')
+        $('.elevate').css('line-height','28px')
+        $('.elevate').css('width','86%')
+       
+        $('.world').css('width','100%') 
+        $('.world').css('left','0%') 
+        $('.world').css('height','230px') 
+        $('.world object').css('zoom','0.6') 
+       
+       
+        $('.letsgo').css('font-size','32px')
+        $('.letsgo').css('left','2%')
+        $('.letsgo').css('line-height','28px')
+        $('.letsgo').css('width','86%')
+
+       
+        $('.steps_flex').css('left','2%')
+        $('.steps_flex').css('width','96%')    
+        $('.flex-item').css('width',(wdt)-(wdt*4/100)-0 +'px')
+        $('.flex-item').css('height','170px')
+        $('.ttl_tx').css('font-size','15px')
+       
+        $('.faq').css('font-size','32px')
+        $('.faq').css('left','2%')
+       
+        $('.faq_txt').css('font-size','13px')
+        $('.faq_txt').css('left','2%')
+        
+        $('.faq-section').css('width',(wdt*96/100)-46 +'px') 
+        $('.faq-section').css('left','2%') 
+       
+
+     }
+  
+     if ( wdt > 769 ) {
+
+
+        $('.title').css('font-size','52px')
+        $('.title').css('line-height','55px')
+        $('.title').css('width','100%')
+        $('.title').css('height','180px') 
+       
+        $('.op_img').css('margin-top','20px') 
+       
+        $('.paragraph').css('width','400px')
+        $('.paragraph').css('font-size','18px')
+        $('.paragraph').css('margin-top','30px') 
+       
+        $('.elevate').css('font-size','42px')
+        $('.elevate').css('left','15%')
+        $('.elevate').css('line-height','55px')
+        $('.elevate').css('width','70%')
+       
+        $('.world').css('width','70%') 
+        $('.world').css('left','15%') 
+        $('.world').css('height','320px') 
+        $('.world object').css('zoom','1') 
+       
+       
+        $('.letsgo').css('font-size','42px')
+        $('.letsgo').css('left','15%')
+        $('.letsgo').css('line-height','55px')
+        $('.letsgo').css('width','70%')
+       
+        $('.steps_flex').css('left','15%')
+        $('.steps_flex').css('width','70%')    
+        $('.flex-item').css('width',(wdt)-(wdt*30/100)-68 +'px')
+        $('.flex-item').css('height','170px')
+        $('.ttl_tx').css('font-size','15px')
+       
+        $('.faq').css('font-size','42px')
+        $('.faq').css('left','15%')
+       
+        $('.faq_txt').css('font-size','15px')
+        $('.faq_txt').css('left','15%')
+ 
+        $('.faq-section').css('width',(wdt*70/100)-104 +'px')
+        $('.faq-section').css('left', (wdt*15/100)-20 +'px')
+
+     }
+      });
+
+
+$(window).resize(function(){
+     var wdt = $(window).width()
+     var wdtx = $('li').width()
+     var hgt = $('li').height()
+     console.log(wdt)
+     if ( wdt < 769 ) {
+       
+
+        $('.title').css('font-size','36px')
+        $('.title').css('line-height','40px')
+        $('.title').css('width','90%') 
+        $('.title').css('height','130px') 
+       
+        $('.op_img').css('margin-top','-50px') 
+       
+        $('.paragraph').css('width','300px')
+        $('.paragraph').css('font-size','17px')
+        $('.paragraph').css('margin-top','-50px') 
+       
+        $('.elevate').css('font-size','32px')
+        $('.elevate').css('left','2%')
+        $('.elevate').css('line-height','28px')
+        $('.elevate').css('width','86%')
+       
+        $('.world').css('width','100%') 
+        $('.world').css('left','0%') 
+        $('.world').css('height','230px') 
+        $('.world object').css('zoom','0.6') 
+       
+       
+        $('.letsgo').css('font-size','32px')
+        $('.letsgo').css('left','2%')
+        $('.letsgo').css('line-height','28px')
+        $('.letsgo').css('width','86%')
+
+       
+        $('.steps_flex').css('left','2%')
+        $('.steps_flex').css('width','96%')    
+        $('.flex-item').css('width',(wdt)-(wdt*4/100)-0 +'px')
+        $('.flex-item').css('height','170px')
+        $('.ttl_tx').css('font-size','15px')
+       
+        $('.faq').css('font-size','32px')
+        $('.faq').css('left','2%')
+       
+        $('.faq_txt').css('font-size','13px')
+        $('.faq_txt').css('left','2%')
+        
+        $('.faq-section').css('width',(wdt*96/100)-46 +'px') 
+        $('.faq-section').css('left','2%') 
+       
+
+     }
+  
+     if ( wdt > 769 ) {
+
+
+        $('.title').css('font-size','52px')
+        $('.title').css('line-height','55px')
+        $('.title').css('width','100%')
+        $('.title').css('height','180px') 
+       
+        $('.op_img').css('margin-top','20px') 
+       
+        $('.paragraph').css('width','400px')
+        $('.paragraph').css('font-size','18px')
+        $('.paragraph').css('margin-top','30px') 
+       
+        $('.elevate').css('font-size','42px')
+        $('.elevate').css('left','15%')
+        $('.elevate').css('line-height','55px')
+        $('.elevate').css('width','70%')
+       
+        $('.world').css('width','70%') 
+        $('.world').css('left','15%') 
+        $('.world').css('height','320px') 
+        $('.world object').css('zoom','1') 
+       
+       
+        $('.letsgo').css('font-size','42px')
+        $('.letsgo').css('left','15%')
+        $('.letsgo').css('line-height','55px')
+        $('.letsgo').css('width','70%')
+       
+        $('.steps_flex').css('left','15%')
+        $('.steps_flex').css('width','70%')    
+        $('.flex-item').css('width',(wdt)-(wdt*30/100)-68 +'px')
+        $('.flex-item').css('height','170px')
+        $('.ttl_tx').css('font-size','15px')
+       
+        $('.faq').css('font-size','42px')
+        $('.faq').css('left','15%')
+       
+        $('.faq_txt').css('font-size','15px')
+        $('.faq_txt').css('left','15%')
+ 
+        $('.faq-section').css('width',(wdt*70/100)-104 +'px')
+        $('.faq-section').css('left', (wdt*15/100)-20 +'px')
+
+     }
+});
+
+
+     
+      $(".faq-item").on("click", function() {
+        const $item = $(this).closest(".faq-item");
+        // Collapse all others
+        $(".faq-item").not($item).removeClass("active").find(".faq-answer").slideUp();
+        // Toggle this one
+        $item.toggleClass("active");
+        $item.find(".faq-answer").slideToggle();
+      });
+     
+      $('.return').click(function() {
+        window.parent.closeDiv();
+      });
  
 </script>
 
