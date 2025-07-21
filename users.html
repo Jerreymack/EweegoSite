@@ -491,7 +491,7 @@ body {
             <h class="elevate">The world is yours</h>
 
             <div class="world" style="overflow: hidden;">
-                <object type="text/html" data="https://eweego.netlify.app/earth.html" style="width: 100%; height: 100%; overflow: hidden;"></object>
+                <object id="rotation" type="text/html" data="https://eweego.netlify.app/earth.html" style="width: 100%; height: 100%; overflow: hidden;"></object>
             </div>
 
             <h class="letsgo">Here we go</h>
@@ -702,8 +702,9 @@ body {
        
         $('.world').css('width','100%') 
         $('.world').css('left','0%') 
-        $('.world').css('height','230px') 
-        $('.world object').css('zoom','0.6') 
+        $('.world').css('height','320px') 
+        $('.world').css('border-radius','0px 0px 10px 10px') 
+        $('#rotation').css('zoom','0.6') 
        
        
         $('.letsgo').css('font-size','32px')
@@ -752,6 +753,7 @@ body {
         $('.world').css('width','70%') 
         $('.world').css('left','15%') 
         $('.world').css('height','320px') 
+        $('.world').css('border-radius','0px 0px 0px 0px') 
         $('.world object').css('zoom','1') 
        
        
@@ -805,8 +807,9 @@ $(window).resize(function(){
        
         $('.world').css('width','100%') 
         $('.world').css('left','0%') 
-        $('.world').css('height','230px') 
-        $('.world object').css('zoom','0.6') 
+        $('.world').css('height','320px') 
+        $('.world').css('border-radius','0px 0px 10px 10px') 
+        $('#rotation').css('zoom','0.6') 
        
        
         $('.letsgo').css('font-size','32px')
@@ -855,6 +858,7 @@ $(window).resize(function(){
         $('.world').css('width','70%') 
         $('.world').css('left','15%') 
         $('.world').css('height','320px') 
+        $('.world').css('border-radius','0px 0px 0px 0px') 
         $('.world object').css('zoom','1') 
        
        
