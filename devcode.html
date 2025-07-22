@@ -191,13 +191,13 @@ pre > code.highlight {
   // jquery & prism js
 
 let code = 
-`//Few seconds left!
-var timeLeft = 120; //seconds
+`//Only seconds remaining to join!
+var Eweego_timeLeft = 120; //time in seconds
 
 function countdown() {
-	timeLeft--;
-	document.getElementById("seconds").innerHTML = String( timeLeft );
-	if (timeLeft > 0) {
+	Eweego_timeLeft--;
+	document.getElementById("seconds").innerHTML = String( Eweego_timeLeft );
+	if (Eweego_timeLeft > 0) {
 		setTimeout(countdown, 1000);
 	}
 };
