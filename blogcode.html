@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+ <html lang="en" >
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <meta name="HandheldFriendly" content="true" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="format-detection" content="telephone=no">
+ 
+<style>
+
+
+body {
+            background: #fff;
+            color: #000;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 3px 3px 12px #bbb;
+    border-radius: 16px;
+    background: #fff;
+  }
+  
+  .card__body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  
+  .tag {
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-family: 'helvetica neue', 'roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    background: #f0f0f0;
+    color: #555;
+  }
+  
+  .tag + .tag {
+    margin-left: 60px;
+  }
+  
+  .card__body h4 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'helvetica neue', 'roboto', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: #000;
+    text-transform: capitalize;
+  }
+
+ p {
+    margin-top: -15px;
+    font-size: 15px;
+    font-family: 'helvetica neue', 'roboto', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: #777;
+    text-transform: capitalize;
+  }
+  
+  .card__footer {
+    display: flex;
+    width: 100%;
+    height: 76px;
+    background: linear-gradient(to bottom, #f7f7f7, #fff);
+    margin-top: auto;
+  }
+  
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+  
+  .user__image { 
+    margin-top: 16px;
+    width: 46px;
+    height: 46px;
+    filter: brightness(92%);
+    margin-left: 20px;
+    border-radius: 50%;
+  }
+
+  h5 {
+    margin-top: 25px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: 'helvetica neue', 'roboto', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: #444;
+    text-transform: capitalize;
+  }
+
+
+  h6 {
+    margin-top: -22px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-family: 'helvetica neue', 'roboto', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: #999;
+    text-transform: capitalize;
+  }
+  
+  .card__body > small {
+    position: relative;
+    float: right;
+    margin-top: -25px;
+    margin-right: 10px;
+    text-align: right;
+    color: #666;
+  }
+
+
+
+</style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-3/cdM9qaJ5lBlzRKqwhMw+ZcNCVonz66BO6HgJudG/P1azm9wFrru31SsBa4T4Ew1AOH8HfDXSWS6emWwPl42A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+
+<body>
+
+    <!--NEWS SECTION-->
+
+        <div class="container">
+            <div class="card">
+              <div class="card__header">
+                <img src="https://i.postimg.cc/gkCk3bbx/pexels-cottonbro-studio-3944425.jpg" alt="card__image" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">News</span>
+                <small>2h ago</small>
+                <h4>Trending Tech Products</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="https://i.pravatar.cc/40" alt="user__image" class="user__image">
+                  <div class="user__info">
+                    <h5>Bertrand Makon</h5>
+                    <h6>Founder of Eweego</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="https://i.postimg.cc/x1LjRp9t/pexels-cottonbro-studio-3944454.jpg" alt="card__image" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">News</span>
+                <h4>Newly Introduced AI Model</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="https://i.pravatar.cc/40?img=9" alt="user__image" class="user__image">
+                  <div class="user__info">
+                    <h5>Bertrand Makon</h5>
+                    <h6>Founder of Eweego</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="https://i.postimg.cc/J7dh4BTc/pexels-cottonbro-studio-3944460.jpg" alt="card__image" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">News</span>
+                <h4>Recent Trends In IT</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="https://i.pravatar.cc/40?img=5" alt="user__image" class="user__image">
+                  <div class="user__info">
+                    <h5>Bertrand Makon</h5>
+                    <h6>Founder of Eweego</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                  <img src="https://i.postimg.cc/3N6rLPyb/pexels-negative-space-177557.jpg" alt="card__image" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">News</span>
+                  <h4>Top Grossing Video Games</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="https://i.pravatar.cc/40?img=13" alt="user__image" class="user__image">
+                    <div class="user__info">
+                    <h5>Bertrand Makon</h5>
+                    <h6>Founder of Eweego</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="https://i.postimg.cc/ydRz1kWn/pexels-andrea-piacquadio-3760778.jpg" alt="card__image" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">News</span>
+                  <h4>Market Crises</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="https://i.pravatar.cc/40?img=23" alt="user__image" class="user__image">
+                    <div class="user__info">
+                    <h5>Bertrand Makon</h5>
+                    <h6>Founder of Eweego</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="https://i.postimg.cc/qBc91fKt/pexels-ono-kosuki-6000154.jpg" alt="card__image" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag tag-blue">News</span>
+                  <h4>What's new in 2022 Tech</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="https://i.pravatar.cc/40?img=21" alt="user__image" class="user__image">
+                    <div class="user__info">
+                      <h5>Bertrand Makon</h5>
+                      <h6>Founder of Eweego</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+$(document).ready(function(){
+    $(".on").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(0)',
+        });
+    });
+    
+    $(".close").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    });
+
+    $(".out").click(function(){
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    })
+})
+
+$(document).ready(function(){
+    $(".on").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(0)',
+        });
+    });
+    
+    $(".close").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    });
+
+    $(".out").click(function(){
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    })
+})
+
+
+
+ScrollReveal({ reset: true });
+        ScrollReveal().reveal('.banner', { easing:"ease-in", delay: 100});
+        ScrollReveal().reveal('.news', { easing: "ease-in", delay: 200});
+        ScrollReveal().reveal('.events', { easing: "ease-in", delay: 200});
+        ScrollReveal().reveal('.jobs', { easing: "ease-in", delay: 200});
+        ScrollReveal().reveal('.register', { easing: "ease-in", delay: 200});
+
+</script>
+
+
+</body>
+</html>
