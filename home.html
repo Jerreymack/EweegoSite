@@ -631,6 +631,9 @@ html {
       <h id="itm_dvx"></h>
     </li>
     <li class="menu_item">
+      <h id="itm_blx"></h>
+    </li>
+    <li class="menu_item">
       <h id="itm_ctx"></h>
     </li>
     <li class="menu_item">
@@ -1488,6 +1491,35 @@ $('#itm_dvx').click(function () {
       $('.overlay').css('display','none');
 
 }); 
+
+
+		
+$('#blx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/blog.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
+	
+	
+$('#itm_blx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/blog.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+      $('.slider').css('top','100%');
+      $('.overlay').css('display','none');
+
+}); 
+
 
 
 	
