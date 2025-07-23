@@ -404,9 +404,17 @@ body {
 
      }
 
-     $('#cities').load(location.href + " #cities");
-     $('#cities').load(location.href + " #cities");
-     $('#cities').load(location.href + " #cities");
+  setTimeout(function(){ 
+       $('#cities').load(location.href + " #cities");
+  }, 500); 
+
+  setTimeout(function(){ 
+       $('#cities').load(location.href + " #cities");
+  }, 1000); 
+
+  setTimeout(function(){ 
+       $('#cities').load(location.href + " #cities");
+  }, 1500); 
        
  });
 
