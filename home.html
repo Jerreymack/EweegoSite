@@ -628,6 +628,9 @@ html {
       <h id="itm_usx"></h>
     </li>
     <li class="menu_item">
+      <h id="itm_ntx"></h>
+    </li>
+    <li class="menu_item">
       <h id="itm_dvx"></h>
     </li>
     <li class="menu_item">
@@ -654,6 +657,7 @@ html {
 <ul class="top_menu">
   <li id="opx"></li>
   <li id="usx"></li>
+  <li id="ntx"></li>
   <li id="dvx"></li>
   <li id="blx"></li>
   <li id="ctx"></li>
@@ -966,11 +970,13 @@ function translate(l) {
    if (lang == 'en') {
       $('#opx').html('Operators')
       $('#usx').html('Users')
+      $('#ntx').html('Network')
       $('#dvx').html('Developers')
       $('#blx').html('Blog')
       $('#ctx').html('Contact')
       $('#itm_opx').html('Operators')
       $('#itm_usx').html('Users')
+      $('#itm_ntx').html('Network')
       $('#itm_dvx').html('Developers')
       $('#itm_blx').html('Blog')
       $('#itm_ctx').html('Contact')
@@ -983,11 +989,13 @@ function translate(l) {
    } else if (lang == 'fr') {
       $('#opx').html('Opérateurs')
       $('#usx').html('Usagers')
+      $('#ntx').html('Réseau')
       $('#dvx').html('Développeurs')
       $('#blx').html('Blog')
       $('#ctx').html('Contact')
       $('#itm_opx').html('Opérators')
       $('#itm_usx').html('Usagers')
+      $('#itm_ntx').html('Réseau')
       $('#itm_dvx').html('Développeurs')
       $('#itm_blx').html('Blog')
       $('#itm_ctx').html('Contact')
@@ -1433,8 +1441,6 @@ $('#itm_opx').click(function () {
       $('.overlay').css('display','none');
 
 }); 
-
-
 		
 	
 $('#usx').click(function () {
@@ -1454,6 +1460,34 @@ $('#itm_usx').click(function () {
       var lang = $('.lang').find("text").text()
 
       $('#_div_body').attr('data','https://eweego.netlify.app/users.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+      $('.slider').css('top','100%');
+      $('.overlay').css('display','none');
+
+}); 
+
+
+		
+$('#ntx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/network.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
+	
+	
+$('#itm_ntx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/network.html?param=' + lang );
 
       $('._div').fadeIn()
       $('#_div_body').load(location.href + " #_div_body");
