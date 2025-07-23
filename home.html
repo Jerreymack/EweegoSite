@@ -415,7 +415,7 @@ html {
   height: 400px;
   background: rgba(30,30,30,0.85);
   border-radius: 30px 30px 0px 0px;
-  box-shadow: 0px 0px 12px rgba(90,90,90,0.55);
+  box-shadow: 0px 0px 12px rgba(70,70,70,0.55);
   left: 0%;
   z-index: 10;
 }
@@ -433,15 +433,16 @@ html {
 
 .menu_item {
   display: flex;
-  width: 100%;
+  width: 70%;
   height: 32px;
-  padding-top: 14px;
-  margin-top: 20px;
+  padding-top: 9px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 0px;
   text-align: center;
   border-radius: 30px;
   cursor: pointer;
-  background: rgba(40, 40, 40, 0);
+  background: rgba(70, 70, 70, 0.5);
   box-shadow: 0px 0px 1px 1px rgba(100, 100, 100, 0);
 }
 
@@ -450,7 +451,7 @@ html {
   height: 32px;
   text-align: center;
   font-family: "Helvetica Neue", "roboto", sans-serif;
-  color: #999;
+  color: #bbb;
   font-weight: 400;
   font-size: 18px;
 }
@@ -593,12 +594,66 @@ html {
   left: 0% ;
   top: 0%;
 }
+  
+  
+  /*--------------------------------------------------------*/
+/*--------------------------- DIV ------------------------*/
+/*--------------------------------------------------------*/
+	
+.contact_div {
+  position: absolute;
+  display: none;
+  background: rgba(0,0,0,0.8);
+  width: 300px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 1px 1px 18px #505050;
+  border-radius: 20px;
+  min-width: 300px;
+  min-height: 500px;
+  overflow: hidden;	
+  z-index: 1001;
+}
+  
+  
+#contact_div_body {
+  position: absolute;
+  width: 100%;
+  height: 100% ;
+  left: 0% ;
+  top: 0%;
+}
 
 </style>
   
 </head>
 
 <body>
+  
+  
+<!----------------------------------------------------->    
+<!--------------------------  DIV --------------------->
+<!----------------------------------------------------->
+
+<div id="contact_div" class="contact_div" style="position: absolute;color: #ccc;   font-family: 'helvetica neue', 'roboto', sans-serif;font-weight: 400;">
+  
+    <h style="position: absolute;font-size:40px;width:300px;height:36px; margin-left:0px; margin-top:50px;text-align:center; color: #555;">CONTACT</h>
+   
+  <img style="position: absolute;width:30px;height:30px; margin-left:24px; margin-top:186px;filter: opacity(70%);" src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaW9uaWNvbiI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cGF0aCBkPSJtNDUxLDM3NGMtMTUuODgsLTE2IC01NC4zNCwtMzkuMzUgLTczLC00OC43NmMtMjQuMywtMTIuMjQgLTI2LjMsLTEzLjI0IC00NS40LDAuOTVjLTEyLjc0LDkuNDcgLTIxLjIxLDE3LjkzIC0zNi4xMiwxNC43NXMtNDcuMzEsLTIxLjExIC03NS42OCwtNDkuMzlzLTQ3LjM0LC02MS42MiAtNTAuNTMsLTc2LjQ4czUuNDEsLTIzLjIzIDE0Ljc5LC0zNmMxMy4yMiwtMTggMTIuMjIsLTIxIDAuOTIsLTQ1LjNjLTguODEsLTE4LjkgLTMyLjg0LC01NyAtNDguOSwtNzIuOGMtMTcuMTgsLTE2Ljk3IC0xNy4xOCwtMTMuOTcgLTI4LjI1LC05LjM3YTE2MC4xNSwxNjAuMTUgMCAwIDAgLTI1LjgzLDEzLjc3Yy0xNiwxMC42MyAtMjQuODgsMTkuNDYgLTMxLjA5LDMyLjczcy05LDQ0LjM4IDIzLjA3LDEwMi42NHM1NC41Nyw4OC4wNSAxMDEuMTQsMTM0LjQ5czgyLjM4LDcxLjQxIDEzNC43MywxMDAuNzdjNjQuNzYsMzYuMjcgODkuNiwyOS4yIDEwMi45MSwyM3MyMi4xOCwtMTUgMzIuODMsLTMxYTE1OS4wOSwxNTkuMDkgMCAwIDAgMTMuOCwtMjUuOGM0LjYxLC0xMS4wMyA3LjYxLC0xMS4wMyAtOS4zOSwtMjguMnoiIGZpbGw9Im5vbmUiIGlkPSJzdmdfMSIgc3Ryb2tlPSIjY2NjY2NjIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMzIiLz4KIDwvZz4KPC9zdmc+'/>
+  
+    <img style="position: absolute;width:30px;height:30px; margin-left:24px; margin-top:246px;;filter: opacity(70%);" src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaW9uaWNvbiI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT48L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMzIwIiBpZD0ic3ZnXzEiIHJ4PSI0MCIgcnk9IjQwIiBzdHJva2U9IiNjY2NjY2MiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzMiIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDApIiB3aWR0aD0iNDE2IiB4PSI0OCIgeT0iOTYiLz4KICA8cGF0aCBkPSJtMTEyLDE2MGwxNDQsMTEybDE0NCwtMTEyIiBmaWxsPSJub25lIiBpZD0ic3ZnXzIiIHN0cm9rZT0iI2NjY2NjYyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjMyIi8+CiA8L2c+Cjwvc3ZnPg=='/>
+  
+      <img style="position: absolute;width:30px;height:30px; margin-left:24px; margin-top:306px;;filter: opacity(70%);" src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaW9uaWNvbiI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT48L3RpdGxlPgogIDxwYXRoIGQ9Im0yNTYsNDhjLTc5LjUsMCAtMTQ0LDYxLjM5IC0xNDQsMTM3YzAsODcgOTYsMjI0Ljg3IDEzMS4yNSwyNzIuNDlhMTUuNzcsMTUuNzcgMCAwIDAgMjUuNSwwYzM1LjI1LC00Ny42IDEzMS4yNSwtMTg1LjQyIDEzMS4yNSwtMjcyLjQ5YzAsLTc1LjYxIC02NC41LC0xMzcgLTE0NCwtMTM3eiIgZmlsbD0ibm9uZSIgaWQ9InN2Z18xIiBzdHJva2U9IiNjY2NjY2MiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzMiIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDApIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMTkyIiBmaWxsPSJub25lIiBpZD0ic3ZnXzIiIHI9IjQ4IiBzdHJva2U9IiNjY2NjY2MiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzMiIvPgogPC9nPgo8L3N2Zz4='/>
+  
+  <h style="position: absolute;font-size:20px;width:200px;height:36px; margin-left:74px; margin-top:190px;filter: opacity(86%);">+1 514 548 3362</h>
+  
+  <h style="position: absolute;font-size:18px;width:200px;height:36px; margin-left:74px; margin-top:250px;filter: opacity(86%);">contact@eweego.com</h>
+  
+<h style="position: absolute;font-size:17px;width:200px;height:36px; margin-left:74px; margin-top:310px;filter: opacity(86%);">75 rue Queen<br>Suite 1400<br>Montreal, QC H3C 2N6<br>Canada</h>
+  
+</div> 
 
 <!----------------------------------------------------->    
 <!--------------------------  DIV --------------------->
@@ -1041,52 +1096,7 @@ function translate(l) {
 
    }
   
-  
-      var wdt = $(window).width()
-   console.log(wdt)
-   if (wdt < 750) {
-      $('.top_menu').css('display', 'none')
-      $('.menu').fadeIn(1500)
-      $('.slogan').css('font-size', '26px')
-      $('.slogan').css('width', '82%')
-      $('#slog_').css('font-size', '22px')
-
-      $('.slogan2').css('font-size', '18px')
-      $('.slogan2').css('width', '82%')
-      $('.slogan2').css('left', '10%')
-      $('#slog2_').css('font-size', '20px')
-      $('.start').css('left', '10%')
-      $('.learn').css('left', (wdt / 10) + 130 + 'px')
-
-      $('.copyright').css('display', 'none')
-      //$('.logo').css('transform','translate(2%)')
-      //alert('small')
-   }
-
-   if (wdt > 750) {
-      $('.top_menu').fadeIn(1500)
-      $('.menu').css('display', 'none')
-      $('.slogan').css('font-size', '38px')
-      $('.slogan').css('width', '52%')
-      $('#slog_').css('font-size', '36px')
-
-      $('.slogan2').css('font-size', '20px')
-      $('.slogan2').css('width', '50%')
-      $('.slogan2').css('left', '50%')
-      $('#slog2_').css('font-size', '24px')
-      $('.start').css('left', '50%')
-      $('.learn').css('left', (wdt / 2) + 130 + 'px')
-
-      $('.copyright').css('display', 'block')
-      //$('.logo').css('margin-top','23px')
-      //$('.logo').css('transform','translate(-50%)')
-   }
-
-}
-
-$(document).ready(function () {
-
-
+   var wdtx = $('li').width()
    var wdt = $(window).width()
    console.log(wdt)
    if (wdt < 750) {
@@ -1102,6 +1112,8 @@ $(document).ready(function () {
       $('#slog2_').css('font-size', '20px')
       $('.start').css('left', '10%')
       $('.learn').css('left', (wdt / 10) + 130 + 'px')
+     
+      $('.menu_item').css('margin-left', (wdt/2) - (wdtx / 2) + 5 + 'px')
 
       $('.copyright').css('display', 'none')
       //$('.logo').css('transform','translate(2%)')
@@ -1121,6 +1133,57 @@ $(document).ready(function () {
       $('#slog2_').css('font-size', '24px')
       $('.start').css('left', '50%')
       $('.learn').css('left', (wdt / 2) + 130 + 'px')
+     
+      $('.menu_item').css('margin-left', (wdt/2) - (wdtx / 2) + 5 + 'px')
+
+      $('.copyright').css('display', 'block')
+      //$('.logo').css('margin-top','23px')
+      //$('.logo').css('transform','translate(-50%)')
+   }
+
+}
+
+$(document).ready(function () {
+
+   var wdtx = $('li').width()
+   var wdt = $(window).width()
+   console.log(wdt)
+   if (wdt < 750) {
+      $('.top_menu').css('display', 'none')
+      $('.menu').fadeIn(1500)
+      $('.slogan').css('font-size', '26px')
+      $('.slogan').css('width', '82%')
+      $('#slog_').css('font-size', '22px')
+
+      $('.slogan2').css('font-size', '18px')
+      $('.slogan2').css('width', '82%')
+      $('.slogan2').css('left', '10%')
+      $('#slog2_').css('font-size', '20px')
+      $('.start').css('left', '10%')
+      $('.learn').css('left', (wdt / 10) + 130 + 'px')
+     
+      $('.menu_item').css('margin-left', (wdt/2) - (wdtx / 2) + 5 + 'px')
+
+      $('.copyright').css('display', 'none')
+      //$('.logo').css('transform','translate(2%)')
+      //alert('small')
+   }
+
+   if (wdt > 750) {
+      $('.top_menu').fadeIn(1500)
+      $('.menu').css('display', 'none')
+      $('.slogan').css('font-size', '38px')
+      $('.slogan').css('width', '52%')
+      $('#slog_').css('font-size', '36px')
+
+      $('.slogan2').css('font-size', '20px')
+      $('.slogan2').css('width', '50%')
+      $('.slogan2').css('left', '50%')
+      $('#slog2_').css('font-size', '24px')
+      $('.start').css('left', '50%')
+      $('.learn').css('left', (wdt / 2) + 130 + 'px')
+     
+      $('.menu_item').css('margin-left', (wdt/2) - (wdtx / 2) + 5 + 'px')
 
       $('.copyright').css('display', 'block')
       //$('.logo').css('margin-top','23px')
@@ -1132,6 +1195,7 @@ $(document).ready(function () {
 
 $(window).resize(function () {
    var wdt = $(window).width()
+   var wdtx = $('li').width()
    console.log(wdt)
    if (wdt < 750) {
       $('.top_menu').css('display', 'none')
@@ -1146,6 +1210,8 @@ $(window).resize(function () {
       $('#slog2_').css('font-size', '20px')
       $('.start').css('left', '10%')
       $('.learn').css('left', (wdt / 10) + 130 + 'px')
+     
+      $('.menu_item').css('margin-left', (wdt/2) - (wdtx / 2) + 5 + 'px')
 
       $('.copyright').css('display', 'none')
       //$('.logo').css('transform','translate(2%)')
@@ -1165,6 +1231,8 @@ $(window).resize(function () {
       $('#slog2_').css('font-size', '24px')
       $('.start').css('left', '50%')
       $('.learn').css('left', (wdt / 2) + 130 + 'px')
+     
+       $('.menu_item').css('margin-left', (wdt/2) - (wdtx / 2) + 5 + 'px')
 
       $('.copyright').css('display', 'block')
       //$('.logo').css('margin-top','23px')
@@ -1241,10 +1309,27 @@ $('.menu').click(function () {
    //$('.menu').css('display', 'none'); 
    //$('.lang').css('display', 'none'); 
 });
+  
+  
+//*------------------------------------------------------------------*/
+//*---------------------------CONTACT--------------------------------*/
+//*------------------------------------------------------------------*/
+$('#ctx').click(function () {
+   $('.contact_div').css('display', 'block');
+   $('.overlay').css('display', 'block')
+});
+  
+  
+$('#itm_ctx').click(function () {
+   $('.contact_div').css('display', 'block');
+   $('.overlay').css('display', 'block')
+   $('.slider').css('top','100%');
+});
 
 $('.overlay').click(function () {
    var wdt = $(window).width()
    $('.overlay').css('display', 'none');
+   $('.contact_div').css('display', 'none');
    $('.overlay').css('background', 'rgba(0, 0, 0, 0.15)');
    $('.slider').animate({
       top: '100%'
