@@ -286,10 +286,12 @@ $("#network_list").delegate("li", "click", function() {
   
   
  $(document).ready(function () {
+  
         var wdt = $(window).width()
-     var wdtx = $('li').width()
-     var hgt = $('li').height()
-     console.log(wdt)
+        var wdtx = $('li').width()
+        var hgt = $('li').height()
+        console.log(wdt)
+  alert(wdtx)
      if ( wdt < 386 ) { 
 
         $('#network_list').css('width','336')
