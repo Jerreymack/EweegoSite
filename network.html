@@ -288,7 +288,7 @@ body {
             </p>
 
             <div class="world" style="overflow: hidden;">
-                <object type="text/html" data="https://eweego.netlify.app/cities.html" style="width: 100%; height: 100%; overflow: hidden;"></object>
+                <object id="cities" type="text/html" data="https://eweego.netlify.app/cities.html" style="width: 100%; height: 100%; overflow: hidden;"></object>
             </div>
 
             <div class="big_gap"></div>
@@ -359,7 +359,7 @@ body {
 
  $(document).ready(function() {
 
-    var wdt = $(window).width()
+     var wdt = $(window).width()
      var wdtx = $('li').width()
      var hgt = $('li').height()
      console.log(wdt)
@@ -403,6 +403,10 @@ body {
         $('.world object').css('zoom','1') 
 
      }
+
+     $('#cities').load(location.href + " #cities");
+     $('#cities').load(location.href + " #cities");
+     $('#cities').load(location.href + " #cities");
        
  });
 
