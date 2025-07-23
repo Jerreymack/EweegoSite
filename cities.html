@@ -283,11 +283,17 @@ $("#network_list").delegate("li", "click", function() {
     var index = $(this).index()-4
     alert(index)
 });
+
+
+$(document).ready(function () {
+
+     resize()
+})
   
   
- $(document).ready(function () {
+ function resize() {
   
- var wdt = $(window).width()
+     var wdt = $(window).width()
      var wdtx = $('li').width()
      var hgt = $('li').height()
      console.log(wdt)
@@ -370,7 +376,7 @@ $("#network_list").delegate("li", "click", function() {
 
      }
    
- });
+ }
 
 
 $(window).resize(function(){
