@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+ <html lang="en" >
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <meta name="HandheldFriendly" content="true" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="format-detection" content="telephone=no">
+ 
+<style>
+  
+body {
+    background: #fff;
+    color: #000;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+#network_list {
+  position: absolute;
+  margin-top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-direction: row;
+  left: 50%;
+  transform: translate(-50%);
+  overflow-y: scroll;
+  height: calc(100% - 120px);
+  width: 100%;
+  gap: 10px;
+  background-color: #fff;
+}
+ 
+.city {
+  float: left;
+  width: 100%;
+  line-height: 32px;
+  height: 160px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(to top right, #111, #333);
+ }
+  
+  
+  .city:hover{
+    background: #111;
+  }
+  
+  
+    @media(min-width: 480px){
+  .city{
+    height: 160px;
+    width: 31.3%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+} 
+  
+  
+@media(min-width: 320px){
+  .city{
+    height: 160px;
+    width: 90%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+} 
+  
+  
+@media(min-width: 386px){
+  .city{
+    height: 160px;
+    width: 90%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+} 
+ 
+  
+  
+  @media(min-width: 480px){
+  .city{
+    height: 160px;
+    width: 46%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+} 
+  
+  
+  @media(min-width: 768px){
+  .city{
+    height: 160px;
+    width: 31.3%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+} 
+ 
+     
+@media(min-width: 1080px){
+  .city{
+    height: 160px;
+    width: 23.3%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+}   
+
+     
+     
+     
+@media(min-width: 1360px){
+  .city{
+    height: 160px;
+    width: 18.7%;
+  } 
+ .city:nth-of-type(1){
+    margin-left: -10px;
+  } 
+}
+ 
+    
+ 
+ .tn {
+   position: absolute;
+   display: none;
+   width: 50px;
+   height: 33.3px;
+   margin-top: 20px;
+   filter: invert(80%);
+   margin-right: 0px;
+ }
+     
+     
+.city_name {
+  left: 0px;
+  margin-top: 78px;
+  width: 100%;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #bbb; 	
+}
+   
+
+.form_input {  
+  position:absolute;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 56px;
+  left: calc(50% + 0px);
+  width: 50%;
+  max-width: 330px;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%, -50%);
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #444;
+  height: 36px;
+  text-align:center;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 2px 16px 5px rgba(70,70,70,.2);
+  background: #fff;
+  z-index: 2;
+ }
+
+     
+.form_input:focus{
+    outline: none;
+  border-radius: 40px;
+
+}
+
+.form_input::placeholder {
+  color: #b3b3b3;
+  opacity: 1; /* Firefox */
+}
+
+.form_input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #b3b3b3;
+}
+
+.form_input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #b3b3b3;
+}
+
+</style>
+</head>
+
+<body>
+
+  <input type="text" class="form_input" id="text" placeholder="Search..." />   
+
+  <ul id="network_list"</ul>
+     
+  <div id="listItem">
+       <img class="tn"/>
+       <div class="city_name"></div>
+       <div class="country"></div>
+       <div class="state"></div>
+       <div class="iso"></div>
+       <div class="status"></div>
+   </div>
+
+       
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+  $.getJSON('https://eweego.nyc3.cdn.digitaloceanspaces.com/TN_LIST/CITIES_List.json', function(data){
+
+console.log(data)
+       var dataObject = data;
+       var listItemString = $('#listItem').html();
+ 
+       dataObject.forEach(buildNewList);
+ 
+ function buildNewList(item, index) {
+
+   
+   
+   var listItem = $('<li class="city">' + listItemString + '</li>');
+   
+   
+   $('.tn', listItem).attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/TN_mini_logo/' + item.TN_NUMBER + 'min.png');
+   $('.tn', listItem).css('display','block');
+   
+   $('.city_name', listItem).html(item.CITY);
+   
+
+
+   
+   $('#network_list').append(listItem);
+   
+   
+   
+ }
+     
+});
+
+
+
+//*-------------------------------------------*//
+//*----------------Search_List----------------*//
+//*-------------------------------------------*//
+
+$(".form_input").on("keyup", function (ev) {
+  var textox = $(this).val();
+  filtrox(textox);
+});
+
+function filtrox(textox) {
+  var lista = $("#network_list li")
+    .hide()
+    .filter(function () {
+      var item = $(this).text();
+      var padrao = new RegExp(textox, "i");
+      return padrao.test(item);
+    })
+    .closest("li")
+    .show();
+}
+
+
+
+
+$("#network_list").delegate("li", "click", function() {
+    var index = $(this).index()-4
+    alert(index)
+});
+
+
+$(window).resize(function(){
+     var wdt = $(window).width()
+     var wdtx = $('li').width()
+     var hgt = $('li').height()
+     console.log(wdt)
+     if ( wdt < 386 ) { 
+
+        $('#network_list').css('width','336')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('width','90%') 
+        //$('.title').css('height','130px') 
+       
+       
+
+     }
+  
+     if ( wdt < 480 && wdt > 386) {
+
+
+        $('#network_list').css('width','390')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')      
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+  
+        if ( wdt < 768 && wdt > 480) {
+
+
+        $('#network_list').css('width','480')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+  
+      if ( wdt < 1080 && wdt > 768) {
+
+
+        $('#network_list').css('width','768')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+  
+    if ( wdt < 1360 && wdt > 1080) {
+
+
+        $('#network_list').css('width','1080')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+     if ( wdt > 1360 ) {
+
+
+        $('#network_list').css('width','1300')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+});
+
+
+</body>
+</html>
