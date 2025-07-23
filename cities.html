@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
  <html lang="en" >
  <head>
@@ -40,13 +41,13 @@ body {
   line-height: 32px;
   height: 160px;
   border-radius: 12px;
-  cursor: pointer;
+  #cursor: pointer;
   background: linear-gradient(to top right, #111, #333);
  }
   
   
   .city:hover{
-    background: #111;
+    background: #222;
   }
   
   
@@ -282,6 +283,93 @@ $("#network_list").delegate("li", "click", function() {
     var index = $(this).index()-4
     alert(index)
 });
+  
+  
+ $(document).ready(function () {
+        var wdt = $(window).width()
+     var wdtx = $('li').width()
+     var hgt = $('li').height()
+     console.log(wdt)
+     if ( wdt < 386 ) { 
+
+        $('#network_list').css('width','336')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('width','90%') 
+        //$('.title').css('height','130px') 
+       
+       
+
+     }
+  
+     if ( wdt < 480 && wdt > 386) {
+
+
+        $('#network_list').css('width','390')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')      
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+  
+        if ( wdt < 768 && wdt > 480) {
+
+
+        $('#network_list').css('width','480')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+  
+      if ( wdt < 1080 && wdt > 768) {
+
+
+        $('#network_list').css('width','768')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+  
+    if ( wdt < 1360 && wdt > 1080) {
+
+
+        $('#network_list').css('width','1080')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+  
+     if ( wdt > 1360 ) {
+
+
+        $('#network_list').css('width','1300')
+        $('.tn').css('margin-left', (wdtx/2)-20 +'px')
+        //$('.title').css('line-height','55px')
+        //$('.title').css('width','100%')
+        //$('.title').css('height','180px') 
+       
+        
+
+     }
+   
+ });
 
 
 $(window).resize(function(){
@@ -369,6 +457,6 @@ $(window).resize(function(){
      }
 });
 
-
+</script>
 </body>
 </html>
