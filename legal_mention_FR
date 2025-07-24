@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Mentions - Eweego Tech Inc.</title>
+    <style>
+        body {
+            font-family: "helvetica Neue","Roboto", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #222;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #222;
+            margin-top: 25px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            margin-left: 20px;
+        }
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>MENTIONS LÉGALES</h1>
+    
+    <div class="section">
+        <h2>Propriétaire du site</h2>
+        <div class="contact-info">
+            <p><strong>Eweego Tech Inc.</strong></p>
+            <p>75 rue Queen, Bureau 1400, Montréal, QC H3C 2N6, Canada</p>
+            <p>Email : <a href="mailto:contact@eweego.com">contact@eweego.com</a></p>
+            <p>Site web : <a href="https://www.eweego.com" target="_blank">https://www.eweego.com</a></p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Immatriculation</h2>
+        <p>Eweego Tech Inc. est une société enregistrée au Canada.</p>
+        <p>Numéro d'entreprise : 1146312-8</p>
+    </div>
+    
+    <div class="section">
+        <h2>Hébergeur</h2>
+        <p>Ce site web est hébergé par :</p>
+        <ul>
+            <li>Netlify</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Propriété intellectuelle</h2>
+        <p>Tous les contenus présents sur ce site, y compris mais sans s'y limiter, les textes, images, graphismes et logos, sont la propriété de Eweego Tech Inc., sauf indication contraire. Toute utilisation, reproduction ou distribution non autorisée de ces contenus est strictement interdite sans autorisation écrite préalable.</p>
+    </div>
+</body>
+</html>
