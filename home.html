@@ -209,9 +209,10 @@ html {
   line-height: 18px;
   padding: 0;
   top: 42%;
+  zoom: 1.3;
   right: -100%;
   width: 43px;
-  height: 123px;
+  height: 162px;
   border-radius: 30px;
   background: rgba(90,90,90,0.8);
   overflow-x: hidden;
@@ -541,7 +542,7 @@ html {
 .legal {
   position: absolute;
   display: block;
-  width: 100px;	
+  width: 200px;	
   border: 0px solid red;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -588,20 +589,18 @@ html {
 	
 .legal_div {
   position: absolute;
-  display: block;
-  background: rgba(0,0,0,0.8);
-  width: 80%;
+  display: none;
+  background: #f0f0f0;
+  width: 90%;
   max-width: 768px;
   min-width: 300px;
-  height: 70%;
+  height: 84%;
   max-heigth: 850px;
   min-heigth: 500px;
   border-radius: 10px;	
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  min-width: 100%;
-  min-height: 100%;
   overflow: hidden;	
   z-index: 1000;
 }
@@ -785,6 +784,9 @@ html {
     </li>
     <li class="menu_item">
       <h id="itm_lgx"></h>
+    </li>
+    <li class="menu_item">
+      <h id="itm_prx"></h>
     </li>
   </ul>
   <svg class="lock" width="46" height="46" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -1127,6 +1129,7 @@ function translate(l) {
       $('#itm_blx').html('Blog')
       $('#itm_ctx').html('Contact')
       $('#itm_lgx').html('Legal')
+      $('#itm_prx').html('Privacy')
       $('.start').html('Get Started')
       $('.legal').html('Legal notice')
       $('.privacy').html('Privacy')
@@ -1148,6 +1151,7 @@ function translate(l) {
       $('#itm_blx').html('Blog')
       $('#itm_ctx').html('Contact')
       $('#itm_lgx').html('Légal')
+      $('#itm_prx').html('Confidentialité')
       $('.start').html('Démarrer')
       $('.legal').html('Mention légale')
       $('.privacy').html('Confidentialité')
@@ -1167,6 +1171,7 @@ function translate(l) {
       $('#itm_blx').html('Blog')
       $('#itm_ctx').html('Contacto')
       $('#itm_lgx').html('Legal')
+      $('#itm_prx').html('Privacidad')
       $('.start').html('Empezar')
       $('.legal').html('Aviso legal')
       $('.privacy').html('Privacidad')
@@ -1186,6 +1191,7 @@ function translate(l) {
       $('#itm_blx').html('Blog')
       $('#itm_ctx').html('Kontakt')
       $('#itm_lgx').html('Rechtliches')
+      $('#itm_prx').html('Datenschutz')
       $('.start').html('Jetzt starten')
       $('.legal').html('Rechtliche Hinweise')
       $('.privacy').html('Datenschutz')
@@ -1200,6 +1206,8 @@ function translate(l) {
    console.log(wdt)
    if (wdt < 750) {
       $('.top_menu').css('display', 'none')
+      $('.legal').css('display', 'none')
+      $('.privacy').css('display', 'none')
       $('.menu').fadeIn(1500)
       $('.slogan').css('font-size', '26px')
       $('.slogan').css('width', '82%')
@@ -1221,6 +1229,8 @@ function translate(l) {
 
    if (wdt > 750) {
       $('.top_menu').fadeIn(1500)
+      $('.legal').fadeIn(1500)
+      $('.privacy').fadeIn(1500)
       $('.menu').css('display', 'none')
       $('.slogan').css('font-size', '38px')
       $('.slogan').css('width', '52%')
@@ -1249,6 +1259,8 @@ $(document).ready(function () {
    console.log(wdt)
    if (wdt < 750) {
       $('.top_menu').css('display', 'none')
+      $('.legal').css('display', 'none')
+      $('.privacy').css('display', 'none')
       $('.menu').fadeIn(1500)
       $('.slogan').css('font-size', '26px')
       $('.slogan').css('width', '82%')
@@ -1270,6 +1282,8 @@ $(document).ready(function () {
 
    if (wdt > 750) {
       $('.top_menu').fadeIn(1500)
+      $('.legal').fadeIn(1500)
+      $('.privacy').fadeIn(1500)
       $('.menu').css('display', 'none')
       $('.slogan').css('font-size', '38px')
       $('.slogan').css('width', '52%')
@@ -1298,6 +1312,8 @@ $(window).resize(function () {
    console.log(wdt)
    if (wdt < 750) {
       $('.top_menu').css('display', 'none')
+      $('.legal').css('display', 'none')
+      $('.privacy').css('display', 'none')
       $('.menu').fadeIn(1500)
       $('.slogan').css('font-size', '26px')
       $('.slogan').css('width', '82%')
@@ -1319,6 +1335,8 @@ $(window).resize(function () {
 
    if (wdt > 750) {
       $('.top_menu').fadeIn(1500)
+      $('.legal').fadeIn(1500)
+      $('.privacy').fadeIn(1500)
       $('.menu').css('display', 'none')
       $('.slogan').css('font-size', '38px')
       $('.slogan').css('width', '52%')
@@ -1428,6 +1446,7 @@ $('#itm_ctx').click(function () {
 $('.overlay').click(function () {
    var wdt = $(window).width()
    $('.overlay').css('display', 'none');
+   $('.legal_div').css('display', 'none');
    $('.contact_div').css('display', 'none');
    $('.overlay').css('background', 'rgba(0, 0, 0, 0.15)');
    $('.slider').animate({
@@ -1735,6 +1754,162 @@ $('#itm_blx').click(function () {
 
       $('.slider').css('top','100%');
       $('.overlay').css('display','none');
+
+}); 
+  
+  
+$('.legal').click(function () {
+  
+       var lang = $('.lang').find("text").text()
+  
+       if (lang == 'FR'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_FR.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'EN'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_EN.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+       if (lang == 'ES'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_ES.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'DE'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_DE.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+}); 
+  
+  
+$('#itm_lgx').click(function () {
+  
+       var lang = $('.lang').find("text").text()
+  
+       if (lang == 'FR'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_FR.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'EN'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_EN.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+       if (lang == 'ES'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_ES.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'DE'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/legal_mention_DE.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+}); 
+  
+  
+$('.privacy').click(function () {
+  
+       var lang = $('.lang').find("text").text()
+  
+       if (lang == 'FR'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_FR.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'EN'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_EN.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+       if (lang == 'ES'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_ES.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'DE'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_DE.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+}); 
+  
+  
+$('#itm_prx').click(function () {
+  
+       var lang = $('.lang').find("text").text()
+  
+       if (lang == 'FR'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_FR.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'EN'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_EN.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+
+       if (lang == 'ES'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_ES.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
+  
+       if (lang == 'DE'){
+         
+            $('#legal_div_body').attr('data','https://eweego.netlify.app/privacy_DE.html')
+            $('.legal_div').fadeIn()
+            $('#legal_div_body').load(location.href + " #legal_div_body");
+            $('.overlay').css('display','block');
+       }
 
 }); 
 
