@@ -117,22 +117,23 @@
         font-size: 52px;
         text-align: center;
         color: #000;
-        z-index: 1;
+        z-index: 2;
       }
 
-      .op_img {
-        position: relative;
-        display: block;
-        left: calc(50% - 0px);
-        transform: translate(-50%);
-        top: 70px;
-        height: 300px;
-        width: 110%;
-        max-width: 525px;
-        object-fit: contain;
-        overflow: hidden;
-        z-index: 1;
-      }
+.op_img {
+  position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%);
+  top: 60px;
+  height: 425px;
+  width: 110%;
+  max-width: 925px;
+  filter: brightness(105%);
+  object-fit: contain;
+  overflow: hidden;
+  z-index: 1;
+}
 
       .paragraph {
         position: relative;
@@ -143,13 +144,14 @@
         height: 180px;
         line-height: 20px;
         width: 400px;
-        padding-top: 30px;
+        padding-top: 0px;
         padding-left: 0px;
         font-family: 'helvetica neue', 'roboto', sans-serif;
         font-weight: 400;
         font-size: 18px;
         text-align: center;
         color: #777;
+        z-index: 2;
       }
 
       .start {
@@ -584,6 +586,9 @@
         $('.title').css('width','100%') 
         $('.title').css('height','130px') 
        
+        $('.op_img').css('margin-top','-80px')
+        $('.op_img').css('zoom','1.3') 
+       
         $('.paragraph').css('width','300px')
         $('.paragraph').css('font-size','17px')
        
@@ -623,6 +628,8 @@
         $('.title').css('line-height','55px')
         $('.title').css('width','100%')
         $('.title').css('height','180px') 
+        $('.op_img').css('margin-top','-10px') 
+        $('.op_img').css('zoom','1.2') 
        
         $('.paragraph').css('width','400px')
         $('.paragraph').css('font-size','18px')
@@ -670,6 +677,8 @@
         $('.title').css('line-height','40px')
         $('.title').css('width','100%') 
         $('.title').css('height','130px') 
+        $('.op_img').css('margin-top','-80px')
+        $('.op_img').css('zoom','1.1') 
        
         $('.paragraph').css('width','300px')
         $('.paragraph').css('font-size','17px')
@@ -710,6 +719,9 @@
         $('.title').css('line-height','55px')
         $('.title').css('width','100%')
         $('.title').css('height','180px') 
+       
+        $('.op_img').css('margin-top','-10px')
+        $('.op_img').css('zoom','1.2') 
        
         $('.paragraph').css('width','400px')
         $('.paragraph').css('font-size','18px')
