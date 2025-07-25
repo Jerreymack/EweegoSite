@@ -475,45 +475,6 @@ body {
 
 
 
- 
-/*--------------------DEMO-------------------*/
-
-.frame {
-  position: absolute;
-  display: none;
-  height: 702.2px;
-  width: 348px;
-  background-color:rgba(0,0,0,0);
-  border-radius: 42px;
-  border: 0px solid red;
-  top: calc( 50% - 01px);  
-  left: calc(50% + 6px);
-  transform: translate(-50%,-50%);
-  overfow: hidden; 
-  z-index: 110
-}
-
-
-.video {
-  position: absolute;
-  display: none;
-  height: 672px;
-  width: 338px;
-  background-color:rgba(0,0,0,0);
-  border-radius: 42px;
-  border: 0px solid red;
-  top: calc( 50% - 4px);  
-  left: calc(50% + 5px);
-  transform: translate(-50%,-50%);
-  overfow: hidden; 
-  z-index: 109;
-}
-
-        
-            
-
-
-
 </style>
   
 </head>
@@ -809,6 +770,11 @@ $(document).ready(function() {
 $('.return').click(function () {
     window.parent.closeSDiv();
 });
+
+
+$('.start').click(function () {
+	window.parent.getVideos()  
+}); 
        
 </script>
 
