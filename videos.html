@@ -1076,30 +1076,30 @@
 
             $(".vid_btn").click(function () {
 
-                var os = getOS()
-                alert(os)
+                  var os = '';
+
+                  if (navigator.appVersion.indexOf("Win")!=-1) os='Windows';
+                  if (navigator.appVersion.indexOf("Mac")!=-1) os='Mac';
+                  if (navigator.appVersion.indexOf("iPhone")!=-1) os='iPhone';
+                  if (navigator.appVersion.indexOf("Android")!=-1) os='Android';
                 
                 if ( os == 'iOS' || os == 'Android' ) {
                     $(".frame").css("display", "block");
                     $(".video").css("display", "block");
                     $(".overlay").css("display", "block");
-                    $(".frame").css("height", '645.7px');
-                    $(".frame").css("width", '320px');
-                    //$(".video").css("zoom", 0.5);
+                    $(".frame").css("zoom", 0.9);
+                    $(".video").css("zoom", 0.0)
                 } else {
                     $(".frame").css("display", "block");
                     $(".video").css("display", "block");
                     $(".overlay").css("display", "block");
-                    $(".frame").css("height", '702.2px');
-                    $(".frame").css("width", '348px');
-                    //$(".video").css("zoom", 1);
+                    $(".frame").css("zoom", 1.1);
+                    $(".video").css("zoom", 1.1);
                 }              
 
             });
 
             $(".overlay").click(function () {
-                //alert('Public transit')
-                //$('.langbar').css('display', 'block');
                 $(".frame").css("display", "none");
                 $(".video").css("display", "none");
                 $(".overlay").css("display", "none");
@@ -1110,27 +1110,6 @@
                 window.parent.closeSDiv();
             });
 
-
-            function getOS() {
-                const userAgent = navigator.userAgent;
-                let os = "Unknown OS";
-
-                if (userAgent.includes("Win")) {
-                    os = "Windows";
-                } else if (userAgent.includes("Mac")) {
-                    os = "macOS";
-                } else if (userAgent.includes("Linux")) {
-                    os = "Linux";
-                } else if (userAgent.includes("Android")) {
-                    os = "Android";
-                } else if (userAgent.includes("iOS")) {
-                    os = "iOS";
-                }
-
-                return os;
-            }
-
-console.log(getOS());
         </script>
     </body>
 </html>
