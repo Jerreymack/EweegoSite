@@ -1075,6 +1075,9 @@
             });
 
             $(".vid_btn").click(function () {
+
+                var os = getOS()
+                alert(os)
                 //alert('Public transit')
                 //$('.langbar').css('display', 'block');
                 //$('.langbar').animate({right: "76px"});
@@ -1095,6 +1098,28 @@
                 //alert('close')
                 window.parent.closeSDiv();
             });
+
+
+            function getOS() {
+                const userAgent = navigator.userAgent;
+                let os = "Unknown OS";
+
+                if (userAgent.includes("Win")) {
+                    os = "Windows";
+                } else if (userAgent.includes("Mac")) {
+                    os = "macOS";
+                } else if (userAgent.includes("Linux")) {
+                    os = "Linux";
+                } else if (userAgent.includes("Android")) {
+                    os = "Android";
+                } else if (userAgent.includes("iOS")) {
+                    os = "iOS";
+                }
+
+                return os;
+            }
+
+console.log(getOS());
         </script>
     </body>
 </html>
