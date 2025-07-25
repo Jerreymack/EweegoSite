@@ -1077,8 +1077,11 @@
             $(".vid_btn").click(function () {
 
                 var os = getOS()
-                alert(os)
-                //alert('Public transit')
+                
+                if ( os == 'iOS' || os == 'Android' ) {
+                    $(".frame").css("zoom", 0.9);
+                    $(".video").css("zoom", 0.9);
+                }               //alert('Public transit')
                 //$('.langbar').css('display', 'block');
                 //$('.langbar').animate({right: "76px"});
                 $(".frame").css("display", "block");
