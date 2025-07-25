@@ -472,8 +472,42 @@ body {
   filter: opacity(15%);
   zoom: 0.12;
  }
+  
+  
+  
+.quest{
+    position: fixed;
+    display:none;
+    width: 300px;
+    height: 250px;
+    margin-left: 24px;
+    top: 546px;
+    border-radius: 12px;
+    background: rgba(50,50,50,0.92)
+} 
+  
+  
+.q1{
+    width: 260px;
+    height: 24px;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+    color: #eee; 
+    cursor: pointer;
+    font-family: 'helvetica neue', 'roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+} 
 
-
+.xx{
+    float: right;
+    margin-right: 6px;
+    margin-top: 6px;
+    cursor: pointer;
+    filter: invert(100%);
+    z-index: 10
+} 
 
 </style>
   
@@ -514,12 +548,24 @@ body {
               
               
                   <h class="eweeg2">eweeg</h>
-                  <h class="o2"></h>  
+                  <h class="o2"></h> 
+              
+              
+                  <div class="quest">
+<img class="xx" src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogPGcgY2xhc3M9ImxheWVyIj4NCiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPg0KICA8ZyBpZD0ic3ZnXzMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xLjcgLTEuNykgdHJhbnNsYXRlKDIgMikgc2NhbGUoMS4xNzUgMS4xNzUpIHRyYW5zbGF0ZSgtMiAtMikiPg0KICAgPHBhdGggZD0ibTEyLDIyYzUuNTIsMCAxMCwtNC40OCAxMCwtMTBjMCwtNS41MiAtNC40OCwtMTAgLTEwLC0xMGMtNS41MiwwIC0xMCw0LjQ4IC0xMCwxMGMwLDUuNTIgNC40OCwxMCAxMCwxMHoiIGZpbGw9IiMyOTJEMzIiIGlkPSJzdmdfMSIgb3BhY2l0eT0iMC40Ii8+DQogICA8cGF0aCBkPSJtMTMuMDYsMTJsMi4zLC0yLjNjMC4yOSwtMC4yOSAwLjI5LC0wLjc3IDAsLTEuMDZjLTAuMjksLTAuMjkgLTAuNzcsLTAuMjkgLTEuMDYsMGwtMi4zLDIuM2wtMi4zLC0yLjNjLTAuMjksLTAuMjkgLTAuNzcsLTAuMjkgLTEuMDYsMGMtMC4yOSwwLjI5IC0wLjI5LDAuNzcgMCwxLjA2bDIuMywyLjNsLTIuMywyLjNjLTAuMjksMC4yOSAtMC4yOSwwLjc3IDAsMS4wNmMwLjE1LDAuMTUgMC4zNCwwLjIyIDAuNTMsMC4yMmMwLjE5LDAgMC4zOCwtMC4wNyAwLjUzLC0wLjIybDIuMywtMi4zbDIuMywyLjNjMC4xNSwwLjE1IDAuMzQsMC4yMiAwLjUzLDAuMjJjMC4xOSwwIDAuMzgsLTAuMDcgMC41MywtMC4yMmMwLjI5LC0wLjI5IDAuMjksLTAuNzcgMCwtMS4wNmwtMi4zLC0yLjN6IiBmaWxsPSIjZmZmZmZmIiBpZD0ic3ZnXzIiLz4NCiAgPC9nPg0KIDwvZz4NCjwvc3ZnPg=='/>
+                    <div class="q1">We would like to integrate with Eweego</div>
+                    <div class="q1">We have a specific question</div>
+                    <div class="q1">We need more info about Eweego</div>
+                    <div class="q1">We need to talk to someone</div>
+                    <div class="q1">Other</div>
+                  </div>
+
+              
                   <h class="title2"></h>
                   <input type="text" class="full_name" placeholder="">
                   <input type="text" class="work_email" placeholder="">
                   <input type="text" class="organism" placeholder="">
-                  <input type="text" class="question" placeholder="">
+                  <input type="text" class="question" placeholder="" readonly/>
                   <textarea type="text" class="description"  rows="6" placeholder=""></textarea>
               
                   <p class="paragraph2">
@@ -645,11 +691,14 @@ function translate(l) {
 
 
 $(document).ready(function(){
-    
+  
      var wdt = $(window).width()
      var wdtx = $('li').width()
+     var wdtz = $('input').width()
      var hgt = $('li').height()
      console.log(wdt)
+  
+  //alert(wdtz)
   
      if ( wdt < 769 ) {
        
@@ -672,6 +721,9 @@ $(document).ready(function(){
         $('.title2').css('height','130px') 
        
         $('.op_img').css('margin-top','-100px') 
+       
+        $('.quest').css('width',(wdtz+34)+'px')
+        $('.q1').css('width',(wdtz-4)+'px')
 
      }
   
@@ -694,7 +746,9 @@ $(document).ready(function(){
         $('.title2').css('height','180px') 
        
         $('.op_img').css('margin-top','-20px') 
-      
+       
+        $('.quest').css('width',wdtz+34+'px')
+        $('.q1').css('width',(wdtz-4)+'px')
        
      }
 
@@ -703,10 +757,14 @@ $(document).ready(function(){
 
 
 $(window).resize(function(){
+  
      var wdt = $(window).width()
      var wdtx = $('li').width()
+     var wdtz = $('input').width()
      var hgt = $('li').height()
      console.log(wdt)
+  
+  //alert(wdtz)
   
      if ( wdt < 769 ) {
        
@@ -729,6 +787,9 @@ $(window).resize(function(){
         $('.title2').css('height','130px') 
        
         $('.op_img').css('margin-top','-100px') 
+       
+        $('.quest').css('width',(wdtz+34)+'px')
+        $('.q1').css('width',(wdtz-4)+'px')
 
      }
   
@@ -751,7 +812,9 @@ $(window).resize(function(){
         $('.title2').css('height','180px') 
        
         $('.op_img').css('margin-top','-20px') 
-      
+       
+        $('.quest').css('width',wdtz+34+'px')
+        $('.q1').css('width',(wdtz-4)+'px')
        
      }
 });
@@ -775,6 +838,22 @@ $('.return').click(function () {
 $('.start').click(function () {
 	window.parent.getVideos()  
 }); 
+  
+  
+$('.question').click(function () {
+	$('.quest').css('display','block')
+}); 
+  
+$('.xx').click(function () {
+	$('.quest').css('display','none')
+}); 
+  
+  
+$('.q1').click(function () {
+    var topic = $(this).html();
+    $('.question').val(topic)
+  	$('.quest').css('display','none')
+});
        
 </script>
 
