@@ -358,12 +358,11 @@
                 display: none;
                 height: 702.2px;
                 width: 348px;
-                zoom: 0.8;
                 background-color: rgba(0, 0, 0, 0);
                 border-radius: 42px;
                 border: 0px solid red;
                 top: calc(50% - 01px);
-                left: calc(50% + 6px);
+                left: calc(50% + 3px);
                 transform: translate(-50%, -50%);
                 overfow: hidden;
                 z-index: 110;
@@ -374,12 +373,11 @@
                 display: none;
                 height: 672px;
                 width: 338px;
-                zoom: 0.8;
                 background-color: rgba(0, 0, 0, 0);
                 border-radius: 42px;
                 border: 0px solid red;
                 top: calc(50% - 4px);
-                left: calc(50% + 5px);
+                left: calc(50% + 2px);
                 transform: translate(-50%, -50%);
                 overfow: hidden;
                 z-index: 109;
@@ -1084,14 +1082,16 @@
                     $(".frame").css("display", "block");
                     $(".video").css("display", "block");
                     $(".overlay").css("display", "block");
-                    $(".frame").css("zoom", 0.5);
-                    $(".video").css("zoom", 0.5);
+                    $(".frame").css("height", '645.7px');
+                    $(".frame").css("width", '320px');
+                    //$(".video").css("zoom", 0.5);
                 } else {
                     $(".frame").css("display", "block");
                     $(".video").css("display", "block");
                     $(".overlay").css("display", "block");
-                    $(".frame").css("zoom", 1);
-                    $(".video").css("zoom", 1);
+                    $(".frame").css("height", '702.2px');
+                    $(".frame").css("width", '348px');
+                    //$(".video").css("zoom", 1);
                 }              
 
             });
