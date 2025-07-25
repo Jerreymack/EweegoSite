@@ -1079,14 +1079,19 @@
                 var os = getOS()
                 
                 if ( os == 'iOS' || os == 'Android' ) {
+                    $(".frame").css("display", "block");
+                    $(".video").css("display", "block");
+                    $(".overlay").css("display", "block");
                     $(".frame").css("zoom", 0.9);
                     $(".video").css("zoom", 0.9);
-                }               //alert('Public transit')
-                //$('.langbar').css('display', 'block');
-                //$('.langbar').animate({right: "76px"});
-                $(".frame").css("display", "block");
-                $(".video").css("display", "block");
-                $(".overlay").css("display", "block");
+                } else {
+                    $(".frame").css("display", "block");
+                    $(".video").css("display", "block");
+                    $(".overlay").css("display", "block");
+                    $(".frame").css("zoom", 1);
+                    $(".video").css("zoom", 1);
+                }              
+
             });
 
             $(".overlay").click(function () {
