@@ -886,6 +886,10 @@ $(window).resize(function(){
 });
 
 
+      $('.start').click(function () {
+	window.parent.getVideos()  
+      }); 
+	
      
       $(".faq-item").on("click", function() {
         const $item = $(this).closest(".faq-item");
