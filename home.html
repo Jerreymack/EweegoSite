@@ -1637,7 +1637,32 @@ $('.learn').click(function () {
 }); 
 
 
+$('#ewx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/about.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+}); 
 	
+	
+$('#itm_ewx').click(function () {
+  
+      var lang = $('.lang').find("text").text()
+
+      $('#_div_body').attr('data','https://eweego.netlify.app/about.html?param=' + lang );
+
+      $('._div').fadeIn()
+      $('#_div_body').load(location.href + " #_div_body");
+
+      $('.slider').css('top','100%');
+      $('.overlay').css('display','none');
+
+}); 
+		
 	
 $('#opx').click(function () {
   
