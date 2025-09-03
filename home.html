@@ -720,7 +720,7 @@ html {
 
 <div id="contact_div" class="contact_div" style="position: absolute;color: #ccc;   font-family: 'helvetica neue', 'roboto', sans-serif;font-weight: 400;">
   
-    <h style="position: absolute;font-size:40px;width:300px;height:36px; margin-left:0px; margin-top:50px;text-align:center; color: #777;">CONTACT</h>
+    <h style="position: absolute;font-size:40px;width:300px;height:36px; margin-left:0px; margin-top:50px;text-align:center; color: #777;" id="cont_title">CONTACT</h>
    
   <img style="position: absolute;width:30px;height:30px; margin-left:24px; margin-top:186px;filter: opacity(70%);" src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaW9uaWNvbiI+CiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cGF0aCBkPSJtNDUxLDM3NGMtMTUuODgsLTE2IC01NC4zNCwtMzkuMzUgLTczLC00OC43NmMtMjQuMywtMTIuMjQgLTI2LjMsLTEzLjI0IC00NS40LDAuOTVjLTEyLjc0LDkuNDcgLTIxLjIxLDE3LjkzIC0zNi4xMiwxNC43NXMtNDcuMzEsLTIxLjExIC03NS42OCwtNDkuMzlzLTQ3LjM0LC02MS42MiAtNTAuNTMsLTc2LjQ4czUuNDEsLTIzLjIzIDE0Ljc5LC0zNmMxMy4yMiwtMTggMTIuMjIsLTIxIDAuOTIsLTQ1LjNjLTguODEsLTE4LjkgLTMyLjg0LC01NyAtNDguOSwtNzIuOGMtMTcuMTgsLTE2Ljk3IC0xNy4xOCwtMTMuOTcgLTI4LjI1LC05LjM3YTE2MC4xNSwxNjAuMTUgMCAwIDAgLTI1LjgzLDEzLjc3Yy0xNiwxMC42MyAtMjQuODgsMTkuNDYgLTMxLjA5LDMyLjczcy05LDQ0LjM4IDIzLjA3LDEwMi42NHM1NC41Nyw4OC4wNSAxMDEuMTQsMTM0LjQ5czgyLjM4LDcxLjQxIDEzNC43MywxMDAuNzdjNjQuNzYsMzYuMjcgODkuNiwyOS4yIDEwMi45MSwyM3MyMi4xOCwtMTUgMzIuODMsLTMxYTE1OS4wOSwxNTkuMDkgMCAwIDAgMTMuOCwtMjUuOGM0LjYxLC0xMS4wMyA3LjYxLC0xMS4wMyAtOS4zOSwtMjguMnoiIGZpbGw9Im5vbmUiIGlkPSJzdmdfMSIgc3Ryb2tlPSIjY2NjY2NjIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMzIiLz4KIDwvZz4KPC9zdmc+'/>
   
@@ -734,7 +734,7 @@ html {
   
   <h style="position: absolute;font-size:17px;width:200px;height:36px; margin-left:74px; margin-top:310px;filter: opacity(86%);">75 rue Queen<br>Suite 1400<br>Montreal, QC H3C 2N6<br>Canada</h>
 
-  <h style="position: absolute;font-size:14px;width:200px;height:36px; margin-left:74px; margin-top:430px;filter: opacity(80%);">Mon - Fri<br>8:30 - 17:00</h>
+  <h style="position: absolute;font-size:14px;width:200px;height:36px; margin-left:74px; margin-top:430px;filter: opacity(80%);" id="biz-hours">Mon - Fri<br>8:30 - 17:00</h>
 
 </div> 
 
@@ -1144,6 +1144,8 @@ function translate(l) {
       $('.slogan').html('<h id="slog_" style="font-size:36px;color:#bbb;font-weight:300">One world. One ride. </h><br>All connected.')
       $('.slogan2').html('Reinventing mobility!<br><h  id="slog2_" style="font-size:24px;color:#aaa;font-weight:300">Further, smarter,<br>with zero investment.</h>')
       $('.learn').html('Learn more')
+      $('#cont_title').html('CONTACT')
+	  $('#biz_hours').html('Mon - Fri<br>8:30 - 17:00')
 
    } else if (lang == 'fr') {
       $('#opx').html('Opérateurs')
@@ -1166,6 +1168,8 @@ function translate(l) {
       $('.slogan').html('<h id="slog_" style="font-size:36px;color:#bbb;font-weight:300">Un monde. Un voyage. </h><br>Une seule connexion.')
       $('.slogan2').html('La mobilité réinventée!<br><h  id="slog2_" style="font-size:24px;color:#aaa;font-weight:300">Plus loin, plus innovant,<br>sans investissement.</h>')
       $('.learn').html('Savoir plus')
+	  $('#cont_title').html('CONTACT')
+	  $('#biz_hours').html('Lun - Ven<br>8:30 - 17:00')
 
    } else if (lang == 'es') {
       $('#opx').html('Operadores')
@@ -1188,6 +1192,8 @@ function translate(l) {
       $('.slogan').html('<h id="slog_" style="font-size:36px;color:#bbb;font-weight:300">Un mundo. Un viaje. </h><br>Todo está conectado.')
       $('.slogan2').html('¡Movilidad reinventada!<br><h  id="slog2_" style="font-size:24px;color:#aaa;font-weight:300">Más alcance y innovación,<br>sin costes iniciales.</h>')
       $('.learn').html('Más info')
+	  $('#cont_title').html('CONTACTO')
+	  $('#biz_hours').html('Lun - Vie<br>8:30 - 17:00')
 
    } else if (lang == 'de') {
       $('#opx').html('Mobilitätsanbieter')
@@ -1208,6 +1214,8 @@ function translate(l) {
       $('.slogan').html('<h id="slog_" style="font-size:36px;color:#bbb;font-weight:300">Eine Welt. Eine Fahrt. </h><br>Alles nahtlos verbunden.')
       $('.slogan2').html('Mobilität neu gedacht!<br><h  id="slog2_" style="font-size:24px;color:#aaa;font-weight:300">Mweiter, innovativer,<br>ohne Investitionskosten.</h>')
       $('.learn').html('Mehr erfahren')
+	  $('#cont_title').html('KONTAKT')
+	  $('#biz_hours').html('Mo - Fr<br>8:30 - 17:00')
 
    }
   
