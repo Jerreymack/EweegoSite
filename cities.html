@@ -263,24 +263,24 @@ body {
 
 <script>
   
-$(document).ready(function() 
+$(document).ready(function() {
                   
         const url = document.URL
         const urlArray = url.split('=');
         var lang = (urlArray[1]).toLowerCase()
-alert(lang)
+
  
         if (lang == 'en') {
-            //$('.form_input').attr('placeholder','Search...')
+            $('.form_input').attr('placeholder','Search...')
         }
         if (lang == 'fr') {
-           // $('.form_input').attr('placeholder','Chercher...')
+            $('.form_input').attr('placeholder','Chercher...')
         }
         if (lang == 'es') {
-           // $('.form_input').attr('placeholder','Buscar...')
+            $('.form_input').attr('placeholder','Buscar...')
         }
         if (lang == 'de') {
-            //$('.form_input').attr('placeholder','Search...')
+            $('.form_input').attr('placeholder','Search...')
         }
 
  
