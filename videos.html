@@ -382,6 +382,40 @@
                 overfow: hidden;
                 z-index: 109;
             }
+          
+          
+          
+            /*--------------____DEMO-------------------*/
+
+            .frameA {
+                position: fixed;
+                display: none;
+                height: 700px;
+                width: 330px;
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 42px;
+                border: 0px solid red;
+                top: calc(50% - 01px);
+                left: calc(50% + 3px);
+                transform: translate(-50%, -50%);
+                overfow: hidden;
+                z-index: 110;
+            }
+
+            .videoA {
+                position: fixed;
+                display: none;
+                height: 678px;
+                width: 328px;
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 42px;
+                border: 0px solid red;
+                top: calc(50% - 4px);
+                left: calc(50% + 2px);
+                transform: translate(-50%, -50%);
+                overfow: hidden;
+                z-index: 109;
+            }
         </style>
     </head>
     <body>
@@ -390,6 +424,11 @@
         <img class="frame" src="https://eweego.nyc3.cdn.digitaloceanspaces.com/Website_Assets/iphone14_Frame-min.png" />
         <video id="video" class="video" width="297" height="629" autoplay="autoplay" controls playsinline muted>
             <source src="https://eweego.nyc3.cdn.digitaloceanspaces.com/AA_Videos/_temp.mp4" type="video/mp4" />
+        </video>
+      
+        <img class="frameA" src="https://eweego.nyc3.cdn.digitaloceanspaces.com/Website_Assets/galaxy_s22_min.png" />
+        <video id="videoA" class="videoA" width="297" height="629" autoplay="autoplay" controls playsinline muted>
+            <source src="" type="video/mp4" />
         </video>
 
         <div class="container">
@@ -404,14 +443,99 @@
                     <h class="eweeg">eweeg</h>
                     <h class="o"></h>
                     <h class="title">
-                        It speaks <br />
-                        louder than<br />
-                        words
                     </h>
 
 
 
-                    <h class="elevate">Public transport</h>
+                    <h class="elevate" id="el1"></h>
+
+                    <div class="steps_flex">
+                        <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
+                            <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T10000266min.png" />
+                            <svg id="vid_btn1_i" class="vid_btn" width="75" height="75">
+                                <g class="layer">
+                                    <g
+                                        fill="none"
+                                        fill-opacity="0.7"
+                                        fill-rule="nonzero"
+                                        id="svg_1"
+                                        stroke-miterlimit="10"
+                                        stroke-width="0"
+                                        transform="translate(0.27109 0.319778) scale(0.996652 1) translate(-0.27109 -0.319778) translate(0.27109 0.320616) matrix(0.824127 0 0 0.820267 0.25 0.249162)"
+                                    >
+                                        <path
+                                            d="m45,0c-24.85,0 -45,20.15 -45,45c0,24.85 20.15,45 45,45s45,-20.15 45,-45c0,-24.85 -20.15,-45 -45,-45zm17.25,46.63l-24.46,14.13c-1.26,0.72 -2.83,-0.18 -2.83,-1.64l0,-28.24c0,-1.46 1.57,-2.36 2.83,-1.64l24.46,14.13c1.26,0.72 1.26,2.54 0,3.26z"
+                                            fill="#000000"
+                                            fill-rule="nonzero"
+                                            id="svg_2"
+                                            stroke-miterlimit="10"
+                                            transform=" matrix(1 0 0 1 0 0) "
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <p class="ttl_tx" id="vidx1" style="color: #eee;"></p>
+                        </div>
+
+                        <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
+                            <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T10000286min.png" />
+
+                            <svg id="vid_btn2_a" class="vid_btn" width="75" height="75">
+                                <g class="layer">
+                                    <g
+                                        fill="none"
+                                        fill-opacity="0.7"
+                                        fill-rule="nonzero"
+                                        id="svg_1"
+                                        stroke-miterlimit="10"
+                                        stroke-width="0"
+                                        transform="translate(0.27109 0.319778) scale(0.996652 1) translate(-0.27109 -0.319778) translate(0.27109 0.320616) matrix(0.824127 0 0 0.820267 0.25 0.249162)"
+                                    >
+                                        <path
+                                            d="m45,0c-24.85,0 -45,20.15 -45,45c0,24.85 20.15,45 45,45s45,-20.15 45,-45c0,-24.85 -20.15,-45 -45,-45zm17.25,46.63l-24.46,14.13c-1.26,0.72 -2.83,-0.18 -2.83,-1.64l0,-28.24c0,-1.46 1.57,-2.36 2.83,-1.64l24.46,14.13c1.26,0.72 1.26,2.54 0,3.26z"
+                                            fill="#000000"
+                                            fill-rule="nonzero"
+                                            id="svg_2"
+                                            stroke-miterlimit="10"
+                                            transform=" matrix(1 0 0 1 0 0) "
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                            <p class="ttl_tx" id="vidx2" style="color: #eee;"></p>
+                        </div>
+
+                        <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
+                            <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T10000075min.png" />
+
+                            <svg id="vid_btn3_a" class="vid_btn" width="75" height="75">
+                                <g class="layer">
+                                    <g
+                                        fill="none"
+                                        fill-opacity="0.7"
+                                        fill-rule="nonzero"
+                                        id="svg_1"
+                                        stroke-miterlimit="10"
+                                        stroke-width="0"
+                                        transform="translate(0.27109 0.319778) scale(0.996652 1) translate(-0.27109 -0.319778) translate(0.27109 0.320616) matrix(0.824127 0 0 0.820267 0.25 0.249162)"
+                                    >
+                                        <path
+                                            d="m45,0c-24.85,0 -45,20.15 -45,45c0,24.85 20.15,45 45,45s45,-20.15 45,-45c0,-24.85 -20.15,-45 -45,-45zm17.25,46.63l-24.46,14.13c-1.26,0.72 -2.83,-0.18 -2.83,-1.64l0,-28.24c0,-1.46 1.57,-2.36 2.83,-1.64l24.46,14.13c1.26,0.72 1.26,2.54 0,3.26z"
+                                            fill="#000000"
+                                            fill-rule="nonzero"
+                                            id="svg_2"
+                                            stroke-miterlimit="10"
+                                            transform=" matrix(1 0 0 1 0 0) "
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                            <p class="ttl_tx" id="vidx3" style="color: #eee;"></p>
+                        </div>
+                    </div>
+
+                    <h class="elevatex" id="el2"></h>
 
                     <div class="steps_flex">
                         <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
@@ -497,7 +621,7 @@
                         </div>
                     </div>
 
-                    <h class="elevatex">Intercity</h>
+                    <h class="elevatex" id="el3"></h>
 
                     <div class="steps_flex">
                         <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
@@ -583,7 +707,7 @@
                         </div>
                     </div>
 
-                    <h class="elevatex">Street parking</h>
+                    <h class="elevatex" id="el4"></h>
 
                     <div class="steps_flex">
                         <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
@@ -669,93 +793,7 @@
                         </div>
                     </div>
 
-                    <h class="elevatex">Ferry</h>
-
-                    <div class="steps_flex">
-                        <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
-                            <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T10000266min.png" />
-                            <svg id="vid_btn1" class="vid_btn" width="75" height="75">
-                                <g class="layer">
-                                    <g
-                                        fill="none"
-                                        fill-opacity="0.7"
-                                        fill-rule="nonzero"
-                                        id="svg_1"
-                                        stroke-miterlimit="10"
-                                        stroke-width="0"
-                                        transform="translate(0.27109 0.319778) scale(0.996652 1) translate(-0.27109 -0.319778) translate(0.27109 0.320616) matrix(0.824127 0 0 0.820267 0.25 0.249162)"
-                                    >
-                                        <path
-                                            d="m45,0c-24.85,0 -45,20.15 -45,45c0,24.85 20.15,45 45,45s45,-20.15 45,-45c0,-24.85 -20.15,-45 -45,-45zm17.25,46.63l-24.46,14.13c-1.26,0.72 -2.83,-0.18 -2.83,-1.64l0,-28.24c0,-1.46 1.57,-2.36 2.83,-1.64l24.46,14.13c1.26,0.72 1.26,2.54 0,3.26z"
-                                            fill="#000000"
-                                            fill-rule="nonzero"
-                                            id="svg_2"
-                                            stroke-miterlimit="10"
-                                            transform=" matrix(1 0 0 1 0 0) "
-                                        />
-                                    </g>
-                                </g>
-                            </svg>
-
-                            <p class="ttl_tx" style="color: #eee;">Monthly pass purchase at Geneva, Swizerland</p>
-                        </div>
-
-                        <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
-                            <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T10000286min.png" />
-                            <svg id="vid_btn2" class="vid_btn" width="75" height="75">
-                                <g class="layer">
-                                    <g
-                                        fill="none"
-                                        fill-opacity="0.7"
-                                        fill-rule="nonzero"
-                                        id="svg_1"
-                                        stroke-miterlimit="10"
-                                        stroke-width="0"
-                                        transform="translate(0.27109 0.319778) scale(0.996652 1) translate(-0.27109 -0.319778) translate(0.27109 0.320616) matrix(0.824127 0 0 0.820267 0.25 0.249162)"
-                                    >
-                                        <path
-                                            d="m45,0c-24.85,0 -45,20.15 -45,45c0,24.85 20.15,45 45,45s45,-20.15 45,-45c0,-24.85 -20.15,-45 -45,-45zm17.25,46.63l-24.46,14.13c-1.26,0.72 -2.83,-0.18 -2.83,-1.64l0,-28.24c0,-1.46 1.57,-2.36 2.83,-1.64l24.46,14.13c1.26,0.72 1.26,2.54 0,3.26z"
-                                            fill="#000000"
-                                            fill-rule="nonzero"
-                                            id="svg_2"
-                                            stroke-miterlimit="10"
-                                            transform=" matrix(1 0 0 1 0 0) "
-                                        />
-                                    </g>
-                                </g>
-                            </svg>
-                            <p class="ttl_tx" style="color: #eee;">7 days pass purchase at Berlin, Germany</p>
-                        </div>
-
-                        <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
-                            <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T10000075min.png" />
-                            <svg id="vid_btn3" class="vid_btn" width="75" height="75">
-                                <g class="layer">
-                                    <g
-                                        fill="none"
-                                        fill-opacity="0.7"
-                                        fill-rule="nonzero"
-                                        id="svg_1"
-                                        stroke-miterlimit="10"
-                                        stroke-width="0"
-                                        transform="translate(0.27109 0.319778) scale(0.996652 1) translate(-0.27109 -0.319778) translate(0.27109 0.320616) matrix(0.824127 0 0 0.820267 0.25 0.249162)"
-                                    >
-                                        <path
-                                            d="m45,0c-24.85,0 -45,20.15 -45,45c0,24.85 20.15,45 45,45s45,-20.15 45,-45c0,-24.85 -20.15,-45 -45,-45zm17.25,46.63l-24.46,14.13c-1.26,0.72 -2.83,-0.18 -2.83,-1.64l0,-28.24c0,-1.46 1.57,-2.36 2.83,-1.64l24.46,14.13c1.26,0.72 1.26,2.54 0,3.26z"
-                                            fill="#000000"
-                                            fill-rule="nonzero"
-                                            id="svg_2"
-                                            stroke-miterlimit="10"
-                                            transform=" matrix(1 0 0 1 0 0) "
-                                        />
-                                    </g>
-                                </g>
-                            </svg>
-                            <p class="ttl_tx" style="color: #eee;">Monthly pass purchase at Montreal, Canada</p>
-                        </div>
-                    </div>
-
-                    <h class="elevatex">Other</h>
+                    <h class="elevatex" id="el5"></h>
 
                     <div class="steps_flex">
                         <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
@@ -890,9 +928,70 @@
             $(document).ready(function () {
                 const url = document.URL;
                 const urlArray = url.split("=");
-                lang = urlArray[1].toLowerCase();
-                //translate(lang)
+                //lang = urlArray[1].toLowerCase();
+                lang = 'en'
+                translate(lang)
             });
+          
+          
+                     function translate(l) {
+            
+               var lang = l
+            
+               if (lang == 'en') {
+                
+                  $('.title').html("It speaks<br>louder than<br>words")
+                 
+                  $('#el1').html('Public transport')
+                  $('#vidx1').html('Public transport')
+                  $('#vidx2').html('Public transport')
+                  $('#vidx3').html('Weekly pass purchase<br>Montreal, Canada')
+                 
+                  $('#el2').html('Intercity')
+                 
+                  $('#el3').html('Urban parking')
+                 
+                  $('#el4').html('Ferries')
+                 
+                  $('#el5').html('Other')
+                  
+             
+               } else if (lang == 'fr') {
+            
+                  $('.title').html("Ça parle<br>plus fort<br>que les mots")
+                 
+                  $('#el1').html('Transports en commun')
+                 
+                  $('#el2').html('Interurbain')
+                 
+                  $('#el3').html('Stationnement urbain')
+                 
+                  $('#el4').html('Traversiers')
+                 
+                  $('#el5').html('Autre')
+                                 
+               } else if (lang == 'es') {
+                 
+                  $('.title').html("Habla<br>más fuerte<br>que las palabras")
+                 
+                  $('#el1').html('Transporte público')
+                 
+                  $('#el2').html('Interurbano')
+                 
+                  $('#el3').html('Aparcamiento urbano')
+                 
+                  $('#el4').html('Ferries')
+                 
+                  $('#el5').html('Otro')         
+                 
+               } else if (lang == 'de') {
+            
+                   $('.title').html('Focus on<br>moving people')
+                  $('.titlex').html('We take care of the rest')
+                 
+               }
+             
+            } 
 
             $(document).ready(function () {
                 var d = new Date();
@@ -1076,25 +1175,40 @@
 
             $(".vid_btn").click(function () {
 
-                  var os = '';
+                  var osRoot = $(this).attr('id');
+        
+                  var osx = osRoot.slice(-1);
+              
+                  var os = ''
+                  if(osx == "i"){
+                     os = 'iPhone'
+                  }
+              
+                  if(osx == "a"){
+                     os = 'Android'
+                  }
+              
+                if ( osRoot == 'vid_btn3_a') { 
+                     //alert('test')
+                  
+                  var source = '<source src="https://eweego.nyc3.cdn.digitaloceanspaces.com/AA_Website_Demos/20250903_STM_7.mp4" type="video/mp4" />'
+                  $(".videoA").html(source);
+                  //$('source').attr('src','https://eweego.nyc3.cdn.digitaloceanspaces.com/AA_Website_Demos/20250903_STM_7.mp4')
+                }
 
-                  if (navigator.appVersion.indexOf("Win")!=-1) os='Windows';
-                  if (navigator.appVersion.indexOf("Mac")!=-1) os='Mac';
-                  if (navigator.appVersion.indexOf("iPhone")!=-1) os='iPhone';
-                  if (navigator.appVersion.indexOf("Android")!=-1) os='Android';
                 
-                if ( os == 'iPhone' || os == 'Android' ) {
+                if ( os == 'iPhone') {
                     $(".frame").css("display", "block");
                     $(".video").css("display", "block");
                     $(".overlay").css("display", "block");
                     $(".frame").css("zoom", 0.9);
                     $(".video").css("zoom", 0.9)
-                } else {
-                    $(".frame").css("display", "block");
-                    $(".video").css("display", "block");
+                } else if ( os == 'Android') {
+                    $(".frameA").css("display", "block");
+                    $(".videoA").css("display", "block");
                     $(".overlay").css("display", "block");
-                    $(".frame").css("zoom", 1.1);
-                    $(".video").css("zoom", 1.1);
+                    $(".frameA").css("zoom", 0.99);
+                    $(".videoA").css("zoom", 0.99);
                 }              
 
             });
@@ -1102,6 +1216,8 @@
             $(".overlay").click(function () {
                 $(".frame").css("display", "none");
                 $(".video").css("display", "none");
+                $(".frameA").css("display", "none");
+                $(".videoA").css("display", "none");
                 $(".overlay").css("display", "none");
             });
 
