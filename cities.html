@@ -263,16 +263,29 @@ body {
 
 <script>
   
-$(document).ready(function() {
+$(document).ready(function() 
+                  
         const url = document.URL
         const urlArray = url.split('=');
         var lang = (urlArray[1]).toLowerCase()
 
- alert('lang')
+ 
+        if (lang == 'en') {
+            $('.form_input').attr('placeholder','Search...')
+        }
+        if (lang == 'fr') {
+            $('.form_input').attr('placeholder','Chercher...')
+        }
+        if (lang == 'es') {
+            $('.form_input').attr('placeholder','Buscar...')
+        }
+        if (lang == 'de') {
+            $('.form_input').attr('placeholder','Search...')
+        }
+
  
 $.getJSON('https://eweego.nyc3.cdn.digitaloceanspaces.com/TN_LIST/Cities_List.json', function(data){
 
-//console.log(data)
        var dataObject = data;
        var listItemString = $('#listItem').html();
  
