@@ -655,7 +655,7 @@
                     <div class="steps_flex">
                         <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
                             <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/FERRIES/CA_QC/TQC000001/TQC000001min.svg" />
-                            <svg id="vid_btn1" class="vid_btn" width="75" height="75">
+                            <svg id="vid_btn10_a" class="vid_btn" width="75" height="75">
                                 <g class="layer">
                                     <g
                                         fill="none"
@@ -1189,6 +1189,12 @@
                   $(".video").html('');
                   $(".video").html(source);
                 } 
+
+                if ( osRoot == 'vid_btn10_a') { 
+                  var source = '<source src="https://eweego.nyc3.cdn.digitaloceanspaces.com/AA_Website_Demos/20250904_STQ_7.mp4" />'
+                  $(".videoA").html('');
+                  $(".videoA").html(source);
+                }
               
                 
                 if ( os == 'iPhone') {
