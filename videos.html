@@ -788,7 +788,7 @@
                         </div>
                         <div class="flex-item" style="height: 210px; background: linear-gradient(to top right, #444, #444);">
                             <img class="tn" src="https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/TN_Logo/T1000000Xmin.png" />
-                            <svg id="vid_btn3" class="vid_btn" width="75" height="75">
+                            <svg id="vid_btn15_i" class="vid_btn" width="75" height="75">
                                 <g class="layer">
                                     <g
                                         fill="none"
@@ -1221,7 +1221,16 @@
                   $(".video").html('');
                   $(".video").html(source);
                 }
-              
+
+                
+               if ( osRoot == 'vid_btn15_i') { 
+                  var source = '<source src="https://eweego.nyc3.cdn.digitaloceanspaces.com/AA_Videos/_temp.mp4" type="video/mp4" />'
+                  $(".video").html('');
+                  $(".video").html(source);
+                }
+
+
+               
                 
                 if ( os == 'iPhone') {
                     $(".frame").css("display", "block");
