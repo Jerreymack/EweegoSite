@@ -413,7 +413,7 @@
             width: 260px;
             height: 24px;
             margin-left: 20px;
-            margin-top: 20px;
+            margin-top: 16px;
             text-align: left;
             color: #eee; 
             cursor: pointer;
@@ -429,9 +429,54 @@
             filter: invert(100%);
             z-index: 10
             } 
+          
+          
+          
+          
+/*-----------------------------------------------------------*/
+/*-----------------------CONNECT DIV ------------------------*/
+/*-----------------------------------------------------------*/
+	
+.connect_div {
+  position: absolute;
+  display: block;
+  background: rgba(255,255,255,0.9);
+  width: 90%;
+  height: 72%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 2px 2px 12px #ccc;
+  border-radius: 18px;
+  min-width: 300px;
+  min-height: 500px;
+  max-width: 1200px;
+  max-height: 900px;
+  overflow: hidden;	
+  z-index: 1001;
+}
+  
+  
+#connect_div_body {
+  position: absolute;
+  width: 100%;
+  height: 100% ;
+  left: 0% ;
+  top: 0%;
+}
+
         </style>
     </head>
     <body>
+      
+<!-------------------------------------------------------->    
+<!----------------------CONNECT  DIV --------------------->
+<!-------------------------------------------------------->
+
+<div id="connect_div" class="connect_div">
+   <object id="connect_body" type="text/html" data="" style="width:100%;height:100%"></object>
+</div> 
+      
         <div class="container">
             <div class="main-content">
                 <div class="card" style="background: #fff;">
@@ -463,14 +508,14 @@
                     <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
                     <input type="hidden" name="_autoresponse" value="Thank you for your message. We'll respond within 24 hours.">
                     <input type="hidden" name="_template" value="box">
-                    <input type="text" class="full_name" placeholder="">
-                    <input type="text" class="work_email" placeholder="">
-                    <input type="text" class="organism" placeholder="">
-                    <input type="text" class="question" placeholder="" readonly/>
-                    <textarea type="text" class="description"  rows="6" placeholder=""></textarea>
+                    <input type="text" class="full_name" name="name" placeholder="">
+                    <input type="text" class="work_email" name="email" placeholder="">
+                    <input type="text" class="organism" name="company" placeholder="">
+                    <input type="text" class="question" placeholder="" name="subject" readonly/>
+                    <textarea type="text" name="message" class="description"  rows="6" placeholder=""></textarea>
                     <p class="paragraph2">
                     </p>
-                    <div class="submit"  onclick="document.getElementById('contactForm').submit();"></div>
+                    <div class="submit"  onclick="submitForm()"></div>
                     </form>
                     
                     <div class="gap"></div>
@@ -502,13 +547,15 @@
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
         <script>
-            $(document).ready(function(){
+
+         $(document).ready(function(){
              
-                const url = document.URL
-                const urlArray = url.split('=');
+                //const url = document.URL
+                //const urlArray = url.split('=');
             
-                lang = (urlArray[1]).toLowerCase()	 
+                lang = 'fr'//(urlArray[1]).toLowerCase()	 
                 translate(lang)
             
             });
@@ -529,7 +576,7 @@
                   $('#quest1').html('We would like to integrate with Eweego')
                   $('#quest2').html('We have a specific question')
                   $('#quest3').html('We need more info about Eweego')
-                  $('#quest4').html("We need more info about VITE")
+                  $('#quest4').html('We need more info about VITE')
                   $('#quest5').html('We need to talk to someone')   
                   $('#quest6').html('Other') 
             
@@ -631,7 +678,7 @@
               
                  var wdt = $(window).width()
                  var wdtx = $('li').width()
-                 var wdtz = $('input').width()
+                 var wdtz = $('.question').width()
                  var hgt = $('li').height()
                  console.log(wdt)
               
@@ -659,7 +706,7 @@
                    
                     $('.op_img').css('margin-top','-100px') 
             
-            	$('.quest').css('top','346px') 
+            	      $('.quest').css('top','346px') 
                     $('.quest').css('width',(wdtz+34)+'px')
                     $('.q1').css('width',(wdtz-4)+'px')
             
@@ -699,7 +746,7 @@
               
                  var wdt = $(window).width()
                  var wdtx = $('li').width()
-                 var wdtz = $('input').width()
+                 var wdtz = $('.question').width()
                  var hgt = $('li').height()
                  console.log(wdt)
               
@@ -795,19 +842,22 @@
                 $('.question').val(topic)
               	$('.quest').css('display','none')
             });
-                   
+
+        
         </script>
 
         <script>
 function submitForm() {
+
     // Get the form
     const form = document.getElementById('contactForm');
     
     // Collect form data
     const formData = new FormData(form);
-    
-    // Send to FormSubmit - email ONLY in this URL
-    fetch('https://formsubmit.co/ajax/ybmakon@example.com', {
+    //alert(formData)
+  
+  // Send to FormSubmit - email ONLY in this URL
+    fetch('https://formsubmit.co/ajax/0033af301b811ddfe0b3bce8235abec8', {
         method: 'POST',
         body: formData
     })
@@ -820,11 +870,11 @@ function submitForm() {
             alert('Something went wrong. Please try again.');
         }
     })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Network error. Please check your connection.');
-    });
-}
+
+    
+
+
+}  
 </script>
-    </body>
+</body>
 </html>
