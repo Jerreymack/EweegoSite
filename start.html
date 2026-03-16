@@ -439,7 +439,7 @@
 	
 .connect_div {
   position: absolute;
-  display: block;
+  display: none;
   background: rgba(255,255,255,0.9);
   width: 90%;
   height: 72%;
@@ -874,9 +874,9 @@ function submitForm() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            //alert('Thank you! Your message has been sent.');
+            alert('Thank you! Your message has been sent.');
 			$('#connect_body').attr('data','https://eweego.com/sent.html' );
-            $('#connect_body').load(location.href + " #vite_body");
+            $('#connect_body').load(location.href + " #connect_body");
    
             $('.connect_div').css('display', 'block');
             $('.overlay').css('display', 'block')
