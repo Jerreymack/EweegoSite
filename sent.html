@@ -175,14 +175,9 @@ html, body {
 <script>
 
       $(document).ready(function() {
-        //const url = document.URL
-        //const urlArray = url.split('=');
-        //lang = (urlArray[1]).toLowerCase()
-        var fn = 'Bertrand'
-        var lang = 'fr'
+        var fn = sessionStorage.getItem("fn")
+        var lang = sessionStorage.getItem("lang")
         translate(lang, fn)
-        
-
       });
   
   
