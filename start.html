@@ -874,7 +874,13 @@ function submitForm() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            alert('Thank you! Your message has been sent.');
+            //alert('Thank you! Your message has been sent.');
+			$('#connect_body').attr('data','https://eweego.com/sent.html' );
+            $('#connect_body').load(location.href + " #vite_body");
+   
+            $('.connect_div').css('display', 'block');
+            $('.overlay').css('display', 'block')
+			
             form.reset();
         } else {
             alert('Something went wrong. Please try again.');
