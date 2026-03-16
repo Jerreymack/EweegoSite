@@ -859,7 +859,7 @@ function submitForm() {
 
 	var fullname = $('.full_name').val()
 	var fn = fullname.split(' ')[0]
-	sessionStorage.setItem("fn", fn)
+	sessionStorage.setItem("fn", fn.toUpperCase() )
 
 	//________Get browser language ____________________________________________
     userLang = navigator.language || navigator.userLanguage;
