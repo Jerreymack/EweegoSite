@@ -890,6 +890,13 @@ function submitForm() {
             $('.overlay').css('display', 'block')
 			
             form.reset();
+
+			window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+			
         } else {
             alert('Something went wrong. Please try again.');
         }
