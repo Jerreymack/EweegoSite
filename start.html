@@ -849,6 +849,16 @@
         <script>
 function submitForm() {
 
+	var fullname = $('.full_name').val()
+	var fn = fullname.splt(' ')[0]
+	sessionStorage.setItem("fn", fn)
+
+	//________Get browser language ____________________________________________
+    userLang = navigator.language || navigator.userLanguage;
+    userLangX = userLang.split('-')
+    var lang = userLangX[0]  
+	sessionStorage.setItem("lang", lang)
+
     // Get the form
     const form = document.getElementById('contactForm');
     
