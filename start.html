@@ -453,7 +453,7 @@
   max-width: 1200px;
   max-height: 900px;
   overflow: hidden;	
-  z-index: 1001;
+  z-index: 101;
 }
   
   
@@ -843,6 +843,12 @@
                 var topic = $(this).html();
                 $('.question').val(topic)
               	$('.quest').css('display','none')
+            });
+
+
+			$('.overlay').click(function () {
+              	$('.overlay').css('display','none')
+				$('.connect_div').css('display','none')
             });
 
         
