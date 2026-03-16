@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+ <html lang="en" >
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <meta name="HandheldFriendly" content="true" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="format-detection" content="telephone=no">
+ 
+<style>
+
+body {
+            background: #f5f5f5;
+            color: #000;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            align-items: center;
+            justify-content: center;
+	        overflow-x: hidden !important;
+            width: 100%;
+            max-width: 100%;
+	        min-width: 100%;        
+}
+  
+.pinicon {     
+  position: absolute;
+  display: block;
+  top: 105%;
+  right: 0px;
+  transform: translateY(-50%);
+  filter: contrast(100%);
+  filter: opacity(6%);
+  overflow-x: hidden !important;
+  z-index: -1
+} 
+
+
+.container {
+            width: 100%;
+            display: flex;	
+            flex-direction: column;
+	        overflow-y: scroll;
+            overflow-x: hidden !important;
+}
+
+
+.main-content {
+            display: grid;
+            grid-template-columns: 100% 0%;
+            gap: 0px;
+            margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 100%;
+            }
+}
+
+
+/*------------------ CARD 1 -------------------------*/
+
+.card {
+            flex-basis: 100%;
+            #background: #fff;
+            border-radius: 0px;
+            padding: 0px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            border-bottom: 0px solid #eee;
+}
+
+
+
+.title {
+  position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%);
+  top:50px;
+  height: 20px;
+  line-height: 55px;
+  width: 100%;
+  min-width: 200px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  text-align: center;	
+  color: #777;	
+  z-index: 1;
+}
+  
+.fn {
+  position: relative;
+  display: block;
+  left: calc(50% - 0px);
+  transform: translate(-50%);
+  height: 50px;
+  top:100px;
+  line-height: 36px;
+  width: 80%;
+  padding-top:  30px;
+  padding-left:  0px;
+  font-family: 'helvetica neue', 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;	
+  color: #000;	
+  z-index: 2
+}
+  
+
+
+
+
+/* Add at the end of your CSS */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.pinicon {
+    max-width: 100%;
+    overflow: hidden;
+}
+     
+
+
+</style>
+  
+</head>
+
+<body>
+
+       <div class="container">
+            <div class="main-content">
+                <div class="card" style="z-index: 1;">
+ 
+
+                    <h class="title"></h>
+
+                    <div class="fn" ></div>
+              
+                    <img class="pinicon" src='https://eweego-s.tor1.cdn.digitaloceanspaces.com/TRAX/pinicon.svg'/>
+
+                    <div class="big_gap"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Section -->
+        <div class="main-footer">
+
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+
+
+<script>
+
+      $(document).ready(function() {
+        //const url = document.URL
+        //const urlArray = url.split('=');
+        //lang = (urlArray[1]).toLowerCase()
+        var fn = 'Bertrand'
+        var lang = 'fr'
+        translate(lang, fn)
+        
+
+      });
+  
+  
+   
+            function translate(l,fn) {
+            
+               var lang = l
+            
+               if (lang == 'en') {
+                
+                  $('.title').html("Sent!")
+                  $('.fn').html(fn + ",<br><br>Thanks for your interest.<br><br><br><br>A member of our team will get in touch with you within the next two working days.")
+
+             
+               } else if (lang == 'fr') {
+            
+                  $('.title').html("Envoyé!")
+                  $('.fn').html(fn + ",<br><br>Merci pour votre intérêt.<br><br><br><br>Un membre de notre équipe vous contactera dans les deux prochains jours ouvrables.")
+                 
+
+
+
+                                 
+               } else if (lang == 'es') {
+                 
+                  $('.title').html("¡Enviado!")
+                  $('.fn').html(fn + ",<br><br>Gracias por su interés.<br><br><br><br>Un miembro de nuestro equipo se pondrá en contacto con usted en los próximos dos días hábiles.")
+                  
+                 
+               } else if (lang == 'de') {
+            
+                   $('.title').html('Gesendet!')
+                  $('.fn').html(fn + ",<br><br>Vielen Dank für Ihr Interesse.<br><br><br><br>Ein Mitglied unseres Teams wird sich innerhalb der nächsten zwei Werktage mit Ihnen in Verbindung setzen.")
+                 
+               }
+             
+            } 
+     
+      $(document).ready(function() {
+        var d = new Date();
+        var year = d.getFullYear();
+        var copyright = 'Eweego Tech Inc.  © ' + year
+        $('.copyright').html(copyright);
+      });
+
+
+      
+      $('.start').click(function () {
+	window.parent.getStarted()  
+      }); 
+
+
+      $(document).ready(function() {
+          var wdt = $(window).width()
+     var wdtx = $('li').width()
+     var hgt = $('li').height()
+     console.log(wdt)
+     if ( wdt < 769 ) {
+       
+
+        $('.title').css('font-size','36px')
+        $('.title').css('line-height','40px')
+        $('.title').css('width','90%') 
+        $('.title').css('height','130px') 
+
+        $('.fn').css('top','0px') 
+        $('.fn').css('width','90%') 
+        $('.fn').css('left','50%') 
+        $('.fn').css('height','400px') 
+          
+		    $('.pinicon').css('top','80%') 
+		    $('.pinicon').css('filter','opacity(20%)') 
+
+
+     }
+  
+     if ( wdt > 769 ) {
+
+
+        $('.title').css('font-size','52px')
+        $('.title').css('line-height','55px')
+        $('.title').css('width','100%')
+        $('.title').css('height','180px') 
+       
+        $('.fn').css('top','20px') 
+        $('.fn').css('width','70%') 
+        $('.fn').css('left','50%') 
+        $('.fn').css('height','400px') 
+		 
+        $('.pinicon').css('top','92%')
+		$('.pinicon').css('filter','opacity(40%)') 
+
+
+     }
+ });
+
+
+$(window).resize(function(){
+     var wdt = $(window).width()
+     var wdtx = $('li').width()
+     var hgt = $('li').height()
+     console.log(wdt)
+     if ( wdt < 769 ) {     
+
+        $('.title').css('font-size','36px')
+        $('.title').css('line-height','40px')
+        $('.title').css('width','90%') 
+        $('.title').css('height','130px') 
+
+        $('.fn').css('top','0px') 
+        $('.fn').css('width','90%') 
+        $('.fn').css('left','50%') 
+        $('.fn').css('height','400px') 
+       
+		$('.pinicon').css('top','80%') 
+		$('.pinicon').css('filter','opacity(20%)')  
+
+     }
+  
+     if ( wdt > 769 ) {
+
+        $('.title').css('font-size','52px')
+        $('.title').css('line-height','55px')
+        $('.title').css('width','100%')
+        $('.title').css('height','180px') 
+       
+        $('.fn').css('top','20px') 
+        $('.fn').css('width','60%') 
+        $('.fn').css('left','50%') 
+        $('.fn').css('height','400px') 
+
+		$('.pinicon').css('top','92%')  
+		$('.pinicon').css('filter','opacity(40%)') 
+      
+
+
+     }
+});
+
+
+     
+      $('.return').click(function() {
+        window.parent.closeDiv();
+      });
+ 
+</script>
+
+
+</body>
+</html>
