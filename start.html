@@ -457,6 +457,11 @@
                         <div class="q1" id="quest5"></div>
                     </div>
                     <h class="title2"></h>
+                    <form  id="contactForm" method="POST" style="display: contents;">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                    <input type="hidden" name="_autoresponse" value="Thank you for your message. We'll respond within 24 hours.">
+                    <input type="hidden" name="_template" value="box">
                     <input type="text" class="full_name" placeholder="">
                     <input type="text" class="work_email" placeholder="">
                     <input type="text" class="organism" placeholder="">
@@ -464,7 +469,9 @@
                     <textarea type="text" class="description"  rows="6" placeholder=""></textarea>
                     <p class="paragraph2">
                     </p>
-                    <div class="submit"></div>
+                    <div class="submit"  onclick="document.getElementById('contactForm').submit();"></div>
+                    </form>
+                    
                     <div class="gap"></div>
                 </div>
             </div>
@@ -789,5 +796,34 @@
             });
                    
         </script>
+
+        <script>
+function submitForm() {
+    // Get the form
+    const form = document.getElementById('contactForm');
+    
+    // Collect form data
+    const formData = new FormData(form);
+    
+    // Send to FormSubmit - email ONLY in this URL
+    fetch('https://formsubmit.co/ajax/ybmakon@example.com', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Thank you! Your message has been sent.');
+            form.reset();
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Network error. Please check your connection.');
+    });
+}
+</script>
     </body>
 </html>
