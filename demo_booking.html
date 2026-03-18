@@ -157,11 +157,10 @@ html, body {
 <script>
 
       $(document).ready(function() {
-        const url = document.URL
-        const urlArray = url.split('=');
-        lang = (urlArray[1]).toLowerCase()
-        
-        lang = 
+        userLang = navigator.language || navigator.userLanguage;
+        userLangX = userLang.split('-')
+        var lang = userLangX[0]  
+
         translate(lang)
       });
   
