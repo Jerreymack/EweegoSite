@@ -1,46 +1,188 @@
 <!DOCTYPE html>
- <html lang="en" >
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
- <meta name="HandheldFriendly" content="true" />
- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
- <meta name="format-detection" content="telephone=no">
- 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="format-detection" content="telephone=no" />
+			
 <style>
-
-
 body {
             background: #fff;
             color: #000;
             padding: 0;
             margin: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            #flex-direction: column;
+            #align-items: center;
             justify-content: center;
 }
 
 
+.knob_holder {
+	position: absolute;
+	display: inline-flex;
+	background: #f0f0f0;
+	margin-top: 10px;
+	padding: 5px;
+	left: 50%;
+	transform: translate(-50%,0%);
+	border-radius: 50px;
+	width: 240px;
+	height: 40px;	
+}
+
+.float_btn {
+	position: absolute;
+	background: rgba(0,0,0,0.1);
+	margin-top: 12.5px;
+	padding-top: 15px;
+	left: calc(50% - 62px);
+	text-align: center;
+	transform: translate(-50%,0%);
+	border-radius: 50px;
+	color: rgba(0,0,0,0);
+	width: 120px;
+	height: 30px;	
+}
+
+.social_btn {
+	position: absolute;
+	background: rgba(0,0,0,0);
+	margin-top: 12.5px;
+	padding-top: 15px;
+	left: calc(50% - 62px);
+	text-align: center;
+	transform: translate(-50%,0%);
+	border-radius: 50px;
+	width: 120px;
+	height: 30px;	
+	cursor: pointer;
+}
+
+
+.insight_btn {
+	position: absolute;
+	background: rgba(0,0,0,0);
+	margin-top: 12.5px;
+	padding-top: 15px;
+	left: calc(50% + 62px);
+	text-align: center;
+	transform: translate(-50%,0%);
+	border-radius: 50px;
+	width: 120px;
+	height: 30px;	
+	cursor: pointer;
+}
 
 
 
+.social {
+    position: absolute;
+    display: block;  /* Changed from inline-block */
+    background: linear-gradient(to top, #fff, #eee, #eee, #ddd, #eee, #eee,#fff);
+    width: 100%;
+    height: calc(100% - 70px);
+    top: 70px;
+    left: 0;  /* Added - ensures proper positioning */
+    z-index: 2;
+    overflow-y: auto;  /* Added - allows scrolling if content overflows */
+    padding: 20px;  /* Added - gives some breathing room */
+    box-sizing: border-box;  /* Added - includes padding in width calculation */
+}
+
+/* Remove absolute positioning from the script tag */
+.elfsight-app-ad1fa090-9c20-447b-a6bd-4cd234a46a09 {
+    width: 100%;
+    min-height: 200px;  /* Ensures widget has space to render */
+}
+
+/* Ensure the widget container fills its parent */
+.social > div:not(.elfsight-app-ad1fa090-9c20-447b-a6bd-4cd234a46a09) {
+    width: 100%;
+    height: 100%;
+}
+	
+.insight {
+
+		
+		position: absolute;
+    display: block;  /* Changed from inline-block */
+    background: linear-gradient(to top, #fff, #f0f0f0, #f0f0f0, #f0f0f0, #f0f0f0, #f0f0f0,#fff);
+    width: 100%;
+    height: calc(100% - 70px);
+    top: 70px;
+    left: 0;  /* Added - ensures proper positioning */
+    z-index: 1;
+    overflow-y: auto;  /* Added - allows scrolling if content overflows */
+    padding: 20px;  /* Added - gives some breathing room */
+    box-sizing: border-box;  /* Added - includes padding in width calculation 
+}
 </style>
+</head>			
+
+<body>	
 
 
 
-  
-</head>
 
-<body>
 
-  
+<div class="knob_holder">
+
+</div>
+
+
+<div class="social">
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-ad1fa090-9c20-447b-a6bd-4cd234a46a09" data-elfsight-app-lazy></div>
+</div>
+
+<div class="insight">
+	    <!-- Elfsight Blog | Untitled Blog -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div style="display:none"class="elfsight-app-110aac5d-bb66-40ee-be6b-9eb54214a003" data-elfsight-app-lazy></div>
+</div>
+
+<div class="insight_btn">Insight</div>
+<div class="social_btn">Social</div>
+<div class="float_btn">x</div>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 
 <script>
+	
+	
+$(window).resize(function(){
+     var wdt = $(window).width()
+		 $('.float_btn').css('left', (wdt/2) - 62)
+		 $('.insight').fadeOut();
+	   $('.social').fadeIn();
+      
+});
 
+
+$('.insight_btn').click(function(){
+	$('.insight').fadeIn();
+	$('.social').fadeOut();
+  var newLeft = ($(window).width() * 0.5) + 62;
+  $('.float_btn').animate({left: newLeft + "px"}, 300);
+});
+
+$('.social_btn').click(function(){
+	$('.insight').fadeOut();
+	$('.social').fadeIn();
+	var newLeft = ($(window).width() * 0.5) - 62;
+  $('.float_btn').animate({left: newLeft + "px"}, 300);
+});
 
 </script>
-
-
-</body>
-</html>
+</body>	
+</html>	
