@@ -145,8 +145,8 @@ body {
 <div style="display:none"class="elfsight-app-110aac5d-bb66-40ee-be6b-9eb54214a003" data-elfsight-app-lazy></div>
 </div>
 
-<div class="insight_btn">Insight</div>
-<div class="social_btn">Social</div>
+<div class="insight_btn"></div>
+<div class="social_btn"></div>
 <div class="float_btn">x</div>
 
 
@@ -159,6 +159,40 @@ body {
 
 
 <script>
+
+$(document).ready(function(){
+
+	 userLang = navigator.language || navigator.userLanguage;
+ userLangX = userLang.split('-')
+ lang = userLangX[0]
+
+	                 if (lang == 'en') {
+                      
+                        $('.social_btn').html("Social")
+                        $('.Insight_btn').html("Insights")
+                        
+                     } else if (lang == 'fr') {
+                  
+                        $('.social_btn').html("Social")
+                        $('.Insight_btn').html("Éclairages")
+                                       
+                     } else if (lang == 'es') {
+                       
+                        $('.social_btn').html("Social")
+                        $('.Insight_btn').html("Perspectivas")
+   
+                     } else if (lang == 'de') {
+                                
+                        $('.social_btn').html("Soziale")
+                        $('.Insight_btn').html("Einblicke")
+
+                     } else {
+                                
+                        $('.social_btn').html("Social")
+                        $('.Insight_btn').html("Insights")
+
+                     }
+});
 	
 	
 $(window).resize(function(){
